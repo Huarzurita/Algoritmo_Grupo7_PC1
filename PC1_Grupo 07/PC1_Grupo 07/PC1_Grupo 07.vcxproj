@@ -115,7 +115,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Capp.h" />
+    <ClInclude Include="CEvento.h" />
+    <ClInclude Include="CNota.h" />
     <ClInclude Include="Controller.h" />
+    <ClInclude Include="CRecordatorio.h" />
+    <ClInclude Include="CTarea.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

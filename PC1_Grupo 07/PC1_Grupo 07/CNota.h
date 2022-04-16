@@ -1,10 +1,10 @@
 #pragma once
 #include "Capp.h"
 template<class t1>
-class CNota: public App<t1>
+class CNota : public App<t1>
 {
 public:
-	CNota(t1 titulo, t1 descripcion):App(titulo,descripcion) {
+	CNota(t1 titulo, t1 descripcion) :App(titulo, descripcion) {
 		this->titulo = titulo;
 		this->descripcion = descripcion;
 	}

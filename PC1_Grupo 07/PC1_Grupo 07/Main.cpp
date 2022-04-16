@@ -44,13 +44,43 @@ int main() {
 		system("cls");
 		switch (opc) {
 		case 1:
-			
+			cout << "\n Ingresar información: ";
+			if (archivo.is_open()) {
+				for (int i = 0; i < 5; i++)
+				{
+					cout << "\n";
+					getline(cin, linea);
+					/*
+					   cin>>linea
+					   // al realizarlo con esto no te guarda todo el string(frase) por eso lo cambie con el getline
+					*/
+					par.push_back(linea);
+				}
+			}
+			if (!archivo.fail())
+			{
+				for (int i = 0; i < par.size(); i++) {
+					archivo << par.at(i) << "\n";
+				}
+				archivo.flush();
+				archivo.close();
+			}
+			_getch();
 			break;
 		case 2:
 
 			_getch();
 			break;
 		case 3:
+			archivo.open("tareas.txt", ios::in);
+			cout << "___________________________________________________________________\n";
+			while (!archivo.eof()) {
+				getline(archivo, linea);
+				cout << linea << "\n";
+			}
+			cout << "___________________________________________________________________\n";
+			_getch();
+			archivo.close();
 
 			break;
 		case 4:
