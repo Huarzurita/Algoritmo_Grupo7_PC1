@@ -1,1 +1,10 @@
+<<<<<<< Updated upstream
 ﻿
+=======
+﻿  Main.cpp
+D:\Visual Studio 2019\CICLO III\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Main.cpp(62,23): warning C4018: '<': no coinciden signed/unsigned
+  .NETFramework,Version=v4.8.AssemblyAttributes.cpp
+  Generando código...
+  Main.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  PC1_Grupo 07.vcxproj -> D:\Visual Studio 2019\CICLO III\Algoritmo_Grupo7_PC1\PC1_Grupo 07\Debug\PC1_Grupo 07.exe
+>>>>>>> Stashed changes

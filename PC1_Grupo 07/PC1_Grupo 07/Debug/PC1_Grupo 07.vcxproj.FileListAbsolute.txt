@@ -1,1 +1,5 @@
 D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Debug\PC1_Grupo 07.vcxproj.AssemblyReference.cache
+<<<<<<< Updated upstream
+=======
+D:\Visual Studio 2019\CICLO III\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Debug\PC1_Grupo 07.vcxproj.AssemblyReference.cache
+>>>>>>> Stashed changes

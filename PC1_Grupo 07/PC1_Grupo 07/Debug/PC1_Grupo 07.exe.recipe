@@ -2,7 +2,11 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
+<<<<<<< Updated upstream
       <FullPath>D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\Debug\PC1_Grupo 07.exe</FullPath>
+=======
+      <FullPath>D:\Visual Studio 2019\CICLO III\Algoritmo_Grupo7_PC1\PC1_Grupo 07\Debug\PC1_Grupo 07.exe</FullPath>
+>>>>>>> Stashed changes
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
