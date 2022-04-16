@@ -4,8 +4,8 @@
 #include "CNota.h"
 #include "CRecordatorio.h"
 #include "CTarea.h"
-
-
+using namespace std;
+template<class t1>
 class Controller
 {
 private:

@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include<time.h>
 #include "sstream"
-using namespace System;
+using namespace std;
 template<class t1> //string y int
 class App {
 protected:
