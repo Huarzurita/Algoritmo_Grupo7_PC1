@@ -1,11 +1,15 @@
 #pragma once
 #include <vector>
+#include "CEvento.h"
+#include "CNota.h"
+#include "CRecordatorio.h"
+#include "CTarea.h"
 
 
 class Controller
 {
 private:
-	vector<Ctarea*>tareas;
+	vector<CTarea*>tareas;
 	vector<CRecordatorio*>recordatorios;
 	vector<CNota*>notas;
 	vector<CEvento*>eventos;
