@@ -3,12 +3,16 @@
 template<class t1>
 class CTarea : public App<t1>
 {
+private:
+	t1 completado;
 public:
-	CTarea(t1 titulo, t1 fecha, t1 hora, t1 urgencia) :App(titulo, fecha, hora, urgencia) {
+	CTarea(t1 completado,t1 titulo, t1 fecha, t1 hora, t1 urgencia) :App(titulo, fecha, hora, urgencia) {
 		this->titulo = titulo;
 		this->fecha = fecha;
 		this->hora = hora;
 		this->urgencia = urgencia;
+		this->completado = completado;
+
 	}
 	void save_data(string line) {
 		fstream file("tareas.txt");

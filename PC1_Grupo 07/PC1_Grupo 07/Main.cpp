@@ -1,11 +1,6 @@
-#include <iostream>
-#include <conio.h>
-#include <fstream>
-#include <vector>
-#include <stdlib.h>
-#include "sstream"
+#include "Controller.h"
 using namespace System;
-using namespace std;
+
 void creadores() {
 	Console::SetCursorPosition(20, 5);
 	cout << "-----------------------------------------------------------------------------------";
@@ -24,12 +19,15 @@ void creadores() {
 	_getch();
 	system("cls");
 }
+template<class t1>
 int main() {
 	setlocale(LC_ALL, "esp");
-	string linea;
+	string titulo,fecha,hora,completado;
+	int urgencia;
 	vector<string> par;
 	fstream archivo("tareas.txt");
 	int opc;
+	Controller<t1> controller ;
 	creadores();
 	while (true) {
 		do {
@@ -44,27 +42,17 @@ int main() {
 		system("cls");
 		switch (opc) {
 		case 1:
-			cout << "\n Ingresar información: ";
-			if (archivo.is_open()) {
-				for (int i = 0; i < 5; i++)
-				{
-					cout << "\n";
-					getline(cin, linea);
-					/*
-					   cin>>linea
-					   // al realizarlo con esto no te guarda todo el string(frase) por eso lo cambie con el getline
-					*/
-					par.push_back(linea);
-				}
-			}
-			if (!archivo.fail())
-			{
-				for (int i = 0; i < par.size(); i++) {
-					archivo << par.at(i) << "\n";
-				}
-				archivo.flush();
-				archivo.close();
-			}
+			cout << "\n Ingresasaddsasdr Titulo de la tarea: ";
+			getline(cin, titulo);
+			cout << "\n Ingresar Fecha de la tarea: ";
+			getline(cin, fecha);
+			cout << "\n Ingresar Hora de la tarea: ";
+			getline(cin, hora);
+			cout << "\n Ingresar Urgencia de la tarea (1 al 10) ";
+			getline(cin, urgencia);
+			cout << "\n Ingresar Si la tarea esta completada o no (SI o NO) ";
+			getline(cin, completado);
+			controller->addTarea(completado,titulo,fecha,hora,urgencia);
 			_getch();
 			break;
 		case 2:
@@ -72,16 +60,7 @@ int main() {
 			_getch();
 			break;
 		case 3:
-			archivo.open("tareas.txt", ios::in);
-			cout << "___________________________________________________________________\n";
-			while (!archivo.eof()) {
-				getline(archivo, linea);
-				cout << linea << "\n";
-			}
-			cout << "___________________________________________________________________\n";
-			_getch();
-			archivo.close();
-
+			
 			break;
 		case 4:
 			exit(0);
