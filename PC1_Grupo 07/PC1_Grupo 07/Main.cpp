@@ -44,28 +44,7 @@ int main() {
 		system("cls");
 		switch (opc) {
 		case 1:
-			int cont;
-			if (archivo.is_open()) {
-				for (int i = 0; i < 4; i++)
-				{
-					cout << "\n Ingresar tarea: ";
-					getline(cin, linea);
-					/*
-					   cin>>linea 
-					   // al realizarlo con esto no te guarda todo el string(frase) por eso lo cambie con el getline 
-					*/
-					par.push_back(linea);
-				}
-			}
-			if (!archivo.fail())
-			{
-				for (int i = 0; i < par.size(); i++) {
-					archivo << par.at(i) << "\n";
-				}
-				archivo.flush();
-				archivo.close();
-			}
-			_getch();
+			
 			break;
 		case 2:
 
