@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\migue\source\repos\Project2\Project2\Controller.h(36,21): warning C4018: '<': no coinciden signed/unsigned
+  main.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  Project2.vcxproj -> C:\Users\migue\source\repos\Project2\Debug\Project2.exe
