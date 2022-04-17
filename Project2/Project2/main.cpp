@@ -158,7 +158,11 @@ int main() {
 				break;
 			}
 		};
-		fun();
+		if (opc== 5)
+		{
+			fun();
+		}
+		
 	}
 	_getch();
 	return 0;
