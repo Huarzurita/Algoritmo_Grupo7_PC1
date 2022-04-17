@@ -31,6 +31,7 @@ int main() {
 	while (true) {
 		do {
 			system("cls");
+			Console::ForegroundColor = ConsoleColor::Cyan;
 			cout << "\n\t -------------------------MENU-------------------------";
 			cout << "\n\t 1. Agregar Tarea";
 			cout << "\n\t 2. Agregar Evento";
@@ -43,6 +44,7 @@ int main() {
 		system("cls");
 		switch (opc) {
 		case 1:
+			Console::ForegroundColor = ConsoleColor::Gray;
 			cout << " INGRESE LOS DATOS SOLICITADOS" << "\n";
 			getline(cin, a);
 			cout << "\n Ingresar título de la tarea: \n";
@@ -69,6 +71,7 @@ int main() {
 			_getch();
 			break;
 		case 2:
+			Console::ForegroundColor = ConsoleColor::Gray;
 			cout << " INGRESE LOS DATOS SOLICITADOS" << "\n";
 			getline(cin, a);
 			cout << "\n Ingresar título del evento: \n";
@@ -89,6 +92,7 @@ int main() {
 			_getch();
 			break;
 		case 3:
+			Console::ForegroundColor = ConsoleColor::Gray;
 			cout << " INGRESE LOS DATOS SOLICITADOS" << "\n";
 			getline(cin, a);
 			cout << "\n Ingresar título del recordatorio: \n";
@@ -105,6 +109,7 @@ int main() {
 			_getch();
 			break;
 		case 4:
+			Console::ForegroundColor = ConsoleColor::Gray;
 			cout << " INGRESE LOS DATOS SOLICITADOS" << "\n";
 			getline(cin, a);
 			cout << "\n Ingresar título de la nota: \n";
@@ -113,13 +118,12 @@ int main() {
 			getline(cin, descripcion);
 			controller->addNota(titulo,descripcion);
 			controller->guardarNotas();
-			
-		
 			_getch();
 			break;
 		case 5:
 			do {
 				system("cls");
+				Console::ForegroundColor = ConsoleColor::Cyan;
 				cout << "\n\t -------------------------MENU-------------------------";
 				cout << "\n\t 1. Mostrar Tareas";
 				cout << "\n\t 2. Mostrar Eventos";
@@ -167,10 +171,3 @@ int main() {
 	_getch();
 	return 0;
 }
-
-/*
-remove("tareas.txt");
-cout << "Introduzca el elemento a eliminar";
-cin >> aux;
-_getch();
-*/

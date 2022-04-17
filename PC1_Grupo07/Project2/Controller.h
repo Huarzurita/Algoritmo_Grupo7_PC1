@@ -29,7 +29,6 @@ public:
 	}
 
 	void guardarTareas() {
-		
 		archivoTareas.open("Tareas.txt", ios::out);
 		if(archivoTareas.fail())
 			cout << "No se pudo abrir el archivo " << "\n";
@@ -57,7 +56,6 @@ public:
 		cout << "___________________________________________________________________\n";
 		_getch();
 		archivoTareas.close();
-		
 	}
 	void guardarEventos() {
 		archivoEventos.open("Eventos.txt", ios::out);
