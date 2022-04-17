@@ -1,2 +1,0 @@
-C:\Users\migue\Downloads\trabajo\notitas__\x64\Debug\notitas__.vcxproj.AssemblyReference.cache
-D:\Visual Studio 2019\CICLO III\Algoritmo_Grupo7_PC1\trabajo\notitas__\x64\Debug\notitas__.vcxproj.AssemblyReference.cache

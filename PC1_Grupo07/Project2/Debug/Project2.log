@@ -1,0 +1,9 @@
+﻿  main.cpp
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\Controller.h(36,21): warning C4018: '<': no coinciden signed/unsigned
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\Controller.h(66,21): warning C4018: '<': no coinciden signed/unsigned
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\Controller.h(97,21): warning C4018: '<': no coinciden signed/unsigned
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\Controller.h(123,21): warning C4018: '<': no coinciden signed/unsigned
+  .NETFramework,Version=v4.8.AssemblyAttributes.cpp
+  Generando código...
+  main.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  Project2.vcxproj -> D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo07\Debug\Project2.exe

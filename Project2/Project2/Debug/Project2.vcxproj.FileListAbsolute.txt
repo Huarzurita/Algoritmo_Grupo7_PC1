@@ -1,3 +1,0 @@
-C:\Users\migue\source\repos\Project2\Project2\Debug\Project2.vcxproj.AssemblyReference.cache
-D:\Visual Studio 2019\CICLO III\Algoritmo_Grupo7_PC1\Project2\Project2\Debug\Project2.vcxproj.AssemblyReference.cache
-D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\Project2\Project2\Debug\Project2.vcxproj.AssemblyReference.cache
