@@ -1,7 +1,36 @@
 ﻿  Main.cpp
-D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Main.cpp(62,23): warning C4018: '<': no coinciden signed/unsigned
-  .NETFramework,Version=v4.8.AssemblyAttributes.cpp
-  Generando código...
-  Main.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
-  PC1_Grupo 07.vcxproj -> D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\Debug\PC1_Grupo 07.exe
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(5243,5): error MSB3541: Files tiene un valor "<<<<<<< Updated upstream" no válido. Caracteres no válidos en la ruta de acceso.
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Capp.h(27,5): error C3646: 'getfecha': especificador de invalidación desconocido
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Capp.h(56): message : Vea la referencia a la creación de una instancia de clase plantilla "App<t1>" que se está compilando
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Capp.h(27,13): error C2059: error de sintaxis: '('
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Capp.h(27,1): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Capp.h(28,5): error C3646: 'gethora': especificador de invalidación desconocido
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Capp.h(28,12): error C2059: error de sintaxis: '('
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Capp.h(28,1): error C2334: símbolos (token) inesperados delante de '{'; se pasará por alto el cuerpo de función aparente
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Capp.h(32,16): error C2061: error de sintaxis: identificador 't2'
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Capp.h(33,15): error C2061: error de sintaxis: identificador 't2'
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Capp.h(38,1): error C2535: 'int App<t1>::geturgencia(void)': función miembro ya definida o declarada
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Capp.h(29): message : vea la declaración de 'App<t1>::geturgencia'
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Capp.h(39,1): error C2535: 'void App<t1>::settitulo(t1)': función miembro ya definida o declarada
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Capp.h(30): message : vea la declaración de 'App<t1>::settitulo'
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Capp.h(40,1): error C2535: 'void App<t1>::setdescripcion(t1)': función miembro ya definida o declarada
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Capp.h(31): message : vea la declaración de 'App<t1>::setdescripcion'
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\CNota.h(5,1): error C2955: 'App': el uso de clase plantilla requiere una lista de argumentos de plantilla
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Capp.h(9): message : vea la declaración de 'App'
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\CNota.h(36): message : Vea la referencia a la creación de una instancia de clase plantilla "CNota<t1>" que se está compilando
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Controller.h(12,9): error C2955: 'CTarea': el uso de clase plantilla requiere una lista de argumentos de plantilla
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\CTarea.h(4): message : vea la declaración de 'CTarea'
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Controller.h(35): message : Vea la referencia a la creación de una instancia de clase plantilla "Controller<t1>" que se está compilando
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Controller.h(12,2): error C2976: 'std::vector': no hay suficientes argumentos de plantilla
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(443): message : vea la declaración de 'std::vector'
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Controller.h(13,9): error C2955: 'CRecordatorio': el uso de clase plantilla requiere una lista de argumentos de plantilla
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\CRecordatorio.h(4): message : vea la declaración de 'CRecordatorio'
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Controller.h(13,2): error C2976: 'std::vector': no hay suficientes argumentos de plantilla
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(443): message : vea la declaración de 'std::vector'
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Controller.h(14,9): error C2955: 'CNota': el uso de clase plantilla requiere una lista de argumentos de plantilla
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\CNota.h(4): message : vea la declaración de 'CNota'
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Controller.h(14,2): error C2976: 'std::vector': no hay suficientes argumentos de plantilla
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(443): message : vea la declaración de 'std::vector'
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Controller.h(15,9): error C2955: 'CEvento': el uso de clase plantilla requiere una lista de argumentos de plantilla
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\CEvento.h(4): message : vea la declaración de 'CEvento'
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo 07\PC1_Grupo 07\Controller.h(15,2): error C2976: 'std::vector': no hay suficientes argumentos de plantilla
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(443): message : vea la declaración de 'std::vector'
