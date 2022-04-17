@@ -25,7 +25,7 @@ int main() {
 	setlocale(LC_ALL, "esp");
 	string a,titulo,fecha,hora,urgencia,completado, lugar, descripcion;
 	bool completo;
-	int opc;
+	int opc,opc2;
 	creadores();
 	Controller* controller = new Controller();
 	while (true) {
@@ -36,9 +36,10 @@ int main() {
 			cout << "\n\t 2. Agregar Evento";
 			cout << "\n\t 3. Agregar Recordatorio";
 			cout << "\n\t 4. Agregar Nota";
-			cout << "\n\t 5. Bye bye";
+			cout << "\n\t 5. Mostrar Datos";
+			cout << "\n\t 6. Bye bye";
 			cout << "\n\t    Ingresar opción:"; cin >> opc;
-		} while (opc != 1 && opc != 2 && opc != 3 && opc != 4 && opc != 5);
+		} while (opc != 1 && opc != 2 && opc != 3 && opc != 4 && opc != 5 && opc != 6);
 		system("cls");
 		switch (opc) {
 		case 1:
@@ -64,7 +65,7 @@ int main() {
 			
 			controller->addTarea(completo,titulo,fecha,hora,urgencia);
 			controller->guardarTareas();
-			controller->mostrarTareas();
+			
 			_getch();
 			break;
 		case 2:
@@ -84,7 +85,7 @@ int main() {
 			getline(cin, descripcion);
 			controller->addEvento(lugar, titulo, fecha, hora, descripcion, urgencia);
 			controller->guardarEventos();
-			controller->mostrarEventos();
+			
 			_getch();
 			break;
 		case 3:
@@ -100,7 +101,7 @@ int main() {
 			getline(cin, urgencia);
 			controller->addRecordatorio(titulo, fecha, hora, urgencia);
 			controller->guardarRecordatorios();
-			controller->mostrarRecordatorios();
+			
 			_getch();
 			break;
 		case 4:
@@ -112,13 +113,52 @@ int main() {
 			getline(cin, descripcion);
 			controller->addNota(titulo,descripcion);
 			controller->guardarNotas();
-			controller->mostrarNotas();
+			
+		
 			_getch();
 			break;
 		case 5:
+			do {
+				system("cls");
+				cout << "\n\t -------------------------MENU-------------------------";
+				cout << "\n\t 1. Mostrar Tareas";
+				cout << "\n\t 2. Mostrar Eventos";
+				cout << "\n\t 3. Mostrar Recordatorios";
+				cout << "\n\t 4. Mostrar Notas";
+				cout << "\n\t 5. Bye bye";
+				cout << "\n\t    Ingresar opción:"; cin >> opc2;
+			} while (opc2 != 1 && opc2 != 2 && opc2 != 3 && opc2 != 4 && opc2 != 5);
+			system("cls");
+			break;
+		case 6:
 			exit(0);
 			break;
 		}
+		auto fun = [opc2, controller]() {//lambda
+			switch (opc2)
+			{
+			case 1:
+				controller->mostrarTareas();
+				_getch();
+				break;
+			case 2:
+				controller->mostrarEventos();
+				_getch();
+				break;
+			case 3:
+				controller->mostrarRecordatorios();
+				_getch();
+				break;
+			case 4:
+				controller->mostrarNotas();
+				_getch();
+				break;
+			case 5:
+				exit(0);
+				break;
+			}
+		};
+		fun();
 	}
 	_getch();
 	return 0;
