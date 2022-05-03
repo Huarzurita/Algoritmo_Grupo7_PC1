@@ -1,0 +1,36 @@
+__________________________________________________________________________________
+INFORMACIÓN DEL EVENTO:
+Título del evento: SS
+Fecha del evento: S
+Hora del evento: S
+Urgencia del evento: S
+Descripción del evento: SS
+Lugar del evento: SSS
+__________________________________________________________________________________
+__________________________________________________________________________________
+INFORMACIÓN DEL EVENTO:
+Título del evento: CCCCC
+Fecha del evento: CC
+Hora del evento: C
+Urgencia del evento: C
+Descripción del evento: C
+Lugar del evento: CC
+__________________________________________________________________________________
+__________________________________________________________________________________
+INFORMACIÓN DEL EVENTO:
+Título del evento: AAAAAAAAAAAAAAAAAAAAAAAAAAA
+Fecha del evento: AA
+Hora del evento: A
+Urgencia del evento: A
+Descripción del evento: AA
+Lugar del evento: AAA
+__________________________________________________________________________________
+__________________________________________________________________________________
+INFORMACIÓN DEL EVENTO:
+Título del evento: 
+Fecha del evento: S
+Hora del evento: SSS
+Urgencia del evento: SS
+Descripción del evento: SS
+Lugar del evento: S
+__________________________________________________________________________________
