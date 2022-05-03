@@ -117,6 +117,8 @@
     <ClInclude Include="Capp.h" />
     <ClInclude Include="CEvento.h" />
     <ClInclude Include="CNota.h" />
+    <ClInclude Include="ColaAgenda.h" />
+    <ClInclude Include="ColaMusica.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="CRecordatorio.h" />
     <ClInclude Include="CTarea.h" />

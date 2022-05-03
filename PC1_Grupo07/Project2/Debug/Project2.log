@@ -1,7 +1,7 @@
 ﻿  main.cpp
-D:\Visual Studio 2019\CICLO III\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\Controller.h(35,21): warning C4018: '<': no coinciden signed/unsigned
-D:\Visual Studio 2019\CICLO III\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\Controller.h(64,21): warning C4018: '<': no coinciden signed/unsigned
-D:\Visual Studio 2019\CICLO III\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\Controller.h(95,21): warning C4018: '<': no coinciden signed/unsigned
-D:\Visual Studio 2019\CICLO III\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\Controller.h(121,21): warning C4018: '<': no coinciden signed/unsigned
+D:\Visual Studio 2019\CICLO III\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\Controller.h(73,21): warning C4018: '<': no coinciden signed/unsigned
+D:\Visual Studio 2019\CICLO III\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\Controller.h(103,21): warning C4018: '<': no coinciden signed/unsigned
+D:\Visual Studio 2019\CICLO III\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\Controller.h(135,21): warning C4018: '<': no coinciden signed/unsigned
+D:\Visual Studio 2019\CICLO III\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\Controller.h(162,21): warning C4018: '<': no coinciden signed/unsigned
   main.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
   Project2.vcxproj -> D:\Visual Studio 2019\CICLO III\Algoritmo_Grupo7_PC1\PC1_Grupo07\Debug\Project2.exe

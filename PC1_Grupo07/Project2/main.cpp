@@ -23,9 +23,8 @@ void creadores() {
 }
 int main() {
 	setlocale(LC_ALL, "esp");
-	string a,titulo,fecha,hora,urgencia,completado, lugar, descripcion;
-	bool completo;
-	int opc,opc2;
+	string a, titulo, fecha, hora, urgencia, completado, lugar, descripcion, contacto, correo, telefono,cancion,genero,artista;
+	int opc, opc2;
 	creadores();
 	Controller* controller = new Controller();
 	while (true) {
@@ -37,10 +36,12 @@ int main() {
 			cout << "\n\t 2. Agregar Evento";
 			cout << "\n\t 3. Agregar Recordatorio";
 			cout << "\n\t 4. Agregar Nota";
-			cout << "\n\t 5. Mostrar Datos";
-			cout << "\n\t 6. Bye bye";
+			cout << "\n\t 5. Agregar Contacto";
+			cout << "\n\t 6. Agregar Musica";
+			cout << "\n\t 7. Mostrar Datos";
+			cout << "\n\t 8. Bye bye";
 			cout << "\n\t    Ingresar opción:"; cin >> opc;
-		} while (opc != 1 && opc != 2 && opc != 3 && opc != 4 && opc != 5 && opc != 6);
+		} while (opc != 1 && opc != 2 && opc != 3 && opc != 4 && opc != 5 && opc != 6 && opc != 7 && opc != 8);
 		system("cls");
 		switch (opc) {
 		case 1:
@@ -60,14 +61,8 @@ int main() {
 				cout << "\n Ingresar si la tarea ha sido completada (SI o NO): ";
 				getline(cin, completado);
 			} while (completado != "SI" && completado != "NO");
-			if (completado == "SI")
-				completo = true;
-			else
-				completo = false;
-			
-			controller->addTarea(completo,titulo,fecha,hora,urgencia);
+			controller->addTarea(completado, titulo, fecha, hora, urgencia);
 			controller->guardarTareas();
-			
 			_getch();
 			break;
 		case 2:
@@ -88,7 +83,7 @@ int main() {
 			getline(cin, descripcion);
 			controller->addEvento(lugar, titulo, fecha, hora, descripcion, urgencia);
 			controller->guardarEventos();
-			
+
 			_getch();
 			break;
 		case 3:
@@ -105,7 +100,6 @@ int main() {
 			getline(cin, urgencia);
 			controller->addRecordatorio(titulo, fecha, hora, urgencia);
 			controller->guardarRecordatorios();
-			
 			_getch();
 			break;
 		case 4:
@@ -116,11 +110,37 @@ int main() {
 			getline(cin, titulo);
 			cout << "\n Ingresar descripción de la nota:  \n";
 			getline(cin, descripcion);
-			controller->addNota(titulo,descripcion);
+			controller->addNota(titulo, descripcion);
 			controller->guardarNotas();
 			_getch();
 			break;
 		case 5:
+			Console::ForegroundColor = ConsoleColor::Gray;
+			cout << " INGRESE LOS DATOS SOLICITADOS" << "\n";
+			getline(cin, a);
+			cout << "\n Ingresar nombre del contacto: \n";
+			getline(cin, contacto);
+			cout << "\n Ingresar correo del contacto: \n";
+			getline(cin, correo);
+			cout << "\n Ingresar teléfono del contacto:  \n";
+			getline(cin, telefono);
+			controller->addAgenda(contacto,correo,telefono);
+			_getch();
+			break;
+		case 6:
+			Console::ForegroundColor = ConsoleColor::Gray;
+			cout << " INGRESE LOS DATOS SOLICITADOS" << "\n";
+			getline(cin, a);
+			cout << "\n Ingresar nombre de la canción: \n";
+			getline(cin, cancion);
+			cout << "\n Ingresar género de la canción: \n";
+			getline(cin, genero);
+			cout << "\n Ingresar artista de la canción:  \n";
+			getline(cin, artista);
+			controller->addMusica(cancion, genero, artista);
+			_getch();
+			break;
+		case 7:
 			do {
 				system("cls");
 				Console::ForegroundColor = ConsoleColor::Cyan;
@@ -129,12 +149,14 @@ int main() {
 				cout << "\n\t 2. Mostrar Eventos";
 				cout << "\n\t 3. Mostrar Recordatorios";
 				cout << "\n\t 4. Mostrar Notas";
-				cout << "\n\t 5. Bye bye";
+				cout << "\n\t 5. Mostrar Contactos";
+				cout << "\n\t 6. Mostrar Canciones";
+				cout << "\n\t 7. Bye bye";
 				cout << "\n\t    Ingresar opción:"; cin >> opc2;
-			} while (opc2 != 1 && opc2 != 2 && opc2 != 3 && opc2 != 4 && opc2 != 5);
+			} while (opc2 != 1 && opc2 != 2 && opc2 != 3 && opc2 != 4 && opc2 != 5 && opc2 != 6 && opc2 != 7);
 			system("cls");
 			break;
-		case 6:
+		case 8:
 			exit(0);
 			break;
 		}
@@ -158,16 +180,24 @@ int main() {
 				_getch();
 				break;
 			case 5:
+				controller->mostrarAgenda();
+				_getch();
+				break;
+			case 6:
+				controller->mostrarMusica();
+				_getch();
+				break;
+			case 7:
 				exit(0);
 				break;
 			}
 		};
-		if (opc== 5)
+		if (opc == 7)
 		{
 			fun();
 		}
-		
 	}
 	_getch();
 	return 0;
 }
+
