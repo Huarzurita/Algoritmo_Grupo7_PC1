@@ -1,7 +1,8 @@
 ﻿  main.cpp
-D:\Visual Studio 2019\CICLO III\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\Controller.h(73,21): warning C4018: '<': no coinciden signed/unsigned
-D:\Visual Studio 2019\CICLO III\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\Controller.h(103,21): warning C4018: '<': no coinciden signed/unsigned
-D:\Visual Studio 2019\CICLO III\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\Controller.h(135,21): warning C4018: '<': no coinciden signed/unsigned
-D:\Visual Studio 2019\CICLO III\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\Controller.h(162,21): warning C4018: '<': no coinciden signed/unsigned
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\Controller.h(78,21): warning C4018: '<': no coinciden signed/unsigned
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\Controller.h(109,21): warning C4018: '<': no coinciden signed/unsigned
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\Controller.h(141,21): warning C4018: '<': no coinciden signed/unsigned
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\Controller.h(169,21): warning C4018: '<': no coinciden signed/unsigned
+D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo07\Project2\main.cpp(26,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
   main.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
-  Project2.vcxproj -> D:\Visual Studio 2019\CICLO III\Algoritmo_Grupo7_PC1\PC1_Grupo07\Debug\Project2.exe
+  Project2.vcxproj -> D:\UPC\CICLO 3\Algoritmos y Estructura de Datos\PC1\Algoritmo_Grupo7_PC1\PC1_Grupo07\Debug\Project2.exe

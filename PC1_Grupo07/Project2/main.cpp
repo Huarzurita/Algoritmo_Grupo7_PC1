@@ -23,8 +23,10 @@ void creadores() {
 }
 int main() {
 	setlocale(LC_ALL, "esp");
+	srand(time(NULL));
+	Quizz<string> q = Quizz<string>();
 	string a, titulo, fecha, hora, urgencia, completado, lugar, descripcion, contacto, correo, telefono,cancion,genero,artista;
-	int opc, opc2;
+	int opc, opc2,opc3;
 	creadores();
 	Controller* controller = new Controller();
 	while (true) {
@@ -39,7 +41,8 @@ int main() {
 			cout << "\n\t 5. Agregar Contacto";
 			cout << "\n\t 6. Agregar Musica";
 			cout << "\n\t 7. Mostrar Datos";
-			cout << "\n\t 8. Bye bye";
+			cout << "\n\t 8. QUIZZ :D";
+			cout << "\n\t 9. Bye bye";
 			cout << "\n\t    Ingresar opción:"; cin >> opc;
 		} while (opc != 1 && opc != 2 && opc != 3 && opc != 4 && opc != 5 && opc != 6 && opc != 7 && opc != 8);
 		system("cls");
@@ -157,6 +160,36 @@ int main() {
 			system("cls");
 			break;
 		case 8:
+			do
+			{
+				system("cls");
+				cout << "[1] Insertar pregunta al quizz" << "\n";
+				cout << "[2] Comenzar Quizz" << "\n";
+				cout << "[3] Salir" << "\n";
+				cin >> opc3;
+
+				if (opc3 == 1) {
+					string dp, dr;
+					system("cls");
+					cout << "Ingrese pregunta " << "\n";
+					cin >> dp;
+					cout << "Ingrese rspta" << "\n";
+					cin >> dr;
+
+					q.Push(dp, dr);
+					system("pause");
+				}
+				if (opc3 == 2) {
+					system("cls");
+					cout << "QUIZZ: " << "\n";
+					q.Print();
+					
+				}
+			} while (opc3 != 3);
+
+
+			break;
+		case 9:
 			exit(0);
 			break;
 		}

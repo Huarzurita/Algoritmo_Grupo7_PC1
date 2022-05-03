@@ -120,6 +120,7 @@
     <ClInclude Include="ColaAgenda.h" />
     <ClInclude Include="ColaMusica.h" />
     <ClInclude Include="Controller.h" />
+    <ClInclude Include="CQuizz.h" />
     <ClInclude Include="CRecordatorio.h" />
     <ClInclude Include="CTarea.h" />
   </ItemGroup>

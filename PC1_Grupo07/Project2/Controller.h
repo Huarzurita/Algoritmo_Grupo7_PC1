@@ -5,16 +5,19 @@
 #include "CTarea.h"
 #include "ColaAgenda.h"
 #include "ColaMusica.h"
+#include "CQuizz.h"
 class Controller
 {
 private:
+
 	vector<CTarea<string>*>tareas;
 	vector<CRecordatorio<string>*>recordatorios;
 	vector<CNota<string>*>notas;
 	vector<CEvento<string>*>eventos;
 	fstream archivoTareas, archivoEventos, archivoNotas, archivoRecordatorios,archivoAgenda, archivoMusica;
 public:
-	Controller() {};
+	Controller() {
+	};
 	~Controller() {};
 	void addTarea(string completado, string titulo, string fecha, string hora, string urgencia) {
 		tareas.push_back(new CTarea<string>(completado, titulo, fecha, hora, urgencia));
@@ -35,6 +38,7 @@ public:
 		obj->saveData();
 		_getch();
 	}
+	
 	void mostrarAgenda() {
 		Random r;
 		string linea;
@@ -66,6 +70,7 @@ public:
 		_getch();
 		archivoMusica.close();
 	}
+
 	void guardarTareas() {
 		archivoTareas.open("Tareas.txt", ios::out);
 		if (archivoTareas.fail())
@@ -96,6 +101,7 @@ public:
 		_getch();
 		archivoTareas.close();
 	}
+
 	void guardarEventos() {
 		archivoEventos.open("Eventos.txt", ios::out);
 		if (archivoEventos.fail())
@@ -155,6 +161,7 @@ public:
 		_getch();
 		archivoNotas.close();
 	}
+
 	void guardarRecordatorios() {
 		archivoRecordatorios.open("Recordatorios.txt", ios::out);
 		if (archivoRecordatorios.fail())
