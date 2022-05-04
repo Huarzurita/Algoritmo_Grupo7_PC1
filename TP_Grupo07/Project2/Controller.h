@@ -73,7 +73,7 @@ public:
 			archivoTareas << "|--------------------------------------------------------------------------------------------|" << "\n";
 			archivoTareas << "|                                   °INFORMACIÓN DE LA TAREA°                                |" << "\n";
 			archivoTareas << "|--------------------------------------------------------------------------------------------|" << "\n";
-			archivoTareas << "   Título de la tarea: "<<tareas[i]->getTitulo() << "\n";
+			archivoTareas << "   Título de la tarea: "<< tareas[i]->getTitulo() << "\n";
 			archivoTareas << "   Fecha de la tarea: " << tareas[i]->getFecha() << "\n";
 			archivoTareas << "   Hora de la tarea: " << tareas[i]->getHora()  << "\n";
 			archivoTareas << "   Urgencia de la tarea: " << tareas[i]->getUrgencia() << "\n";

@@ -1,5 +1,4 @@
-#include <iostream>
-#include <conio.h>
+#include <functional>
 #include <fstream>
 #include <vector>
 #include <stdlib.h>

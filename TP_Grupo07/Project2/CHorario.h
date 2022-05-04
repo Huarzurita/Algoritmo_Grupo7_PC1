@@ -45,6 +45,7 @@ public:
 		            //elemento a agregar 8   10->20->nullptr y ahora 10->20->8->nullptr
 		}
 	}
+
 	void saveData() {
 		if (inicio==NULL) {
 			cout << "La lista está vacía " << "\n";

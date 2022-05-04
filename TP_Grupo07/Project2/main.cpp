@@ -22,13 +22,17 @@ void creadores() {
 	_getch();
 	system("cls");
 }
+void imprimir(function<void()>funcion) {
+	funcion();
+}
+
 int main() {
 	setlocale(LC_ALL, "esp");
 	srand(time(NULL));
 	Quizz<string> q = Quizz<string>();
 	string a, titulo, fecha, hora, urgencia, completado, lugar, descripcion, contacto, correo, telefono,cancion,genero,artista, actividad,horaI, horaF;
 	int opc, opc2,opc3;
-	creadores();
+	imprimir(creadores);
 	Controller* controller = new Controller();
 	while (true) {
 		do {
