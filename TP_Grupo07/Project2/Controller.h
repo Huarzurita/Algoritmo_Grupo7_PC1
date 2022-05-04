@@ -3,9 +3,9 @@
 #include "CNota.h"
 #include "CRecordatorio.h"
 #include "CTarea.h"
-#include "ColaAgenda.h"
-#include "ColaMusica.h"
-#include "CQuizz.h"
+#include "CAgenda.h"
+#include "CHorario.h"
+#include "CMusica.h"
 class Controller
 {
 private:
@@ -14,6 +14,9 @@ private:
 	vector<CRecordatorio<string>*>recordatorios;
 	vector<CNota<string>*>notas;
 	vector<CEvento<string>*>eventos;
+	vector<Contact_queue<string>*>agenda;
+	vector<Music_Queue<string>*>musica;
+	vector<CHorario<string>*>horario;
 	fstream archivoTareas, archivoEventos, archivoNotas, archivoRecordatorios,archivoAgenda, archivoMusica;
 public:
 	Controller() {
@@ -31,44 +34,34 @@ public:
 	void addEvento(string lugar, string titulo, string fecha, string hora, string descripcion, string urgencia) {
 		eventos.push_back(new CEvento<string>(lugar, titulo, fecha, hora, descripcion, urgencia));
 	}
-	void addAgenda(string contacto, string correo, string telefono) {
-		ColaAgenda<string>*obj;
-		obj = new ColaAgenda<string>(contacto, correo, telefono);
-		obj->push();
-		obj->saveData();
-		_getch();
+	void add_Agenda(string contacto, string correo, string telefono) {
+		agenda.push_back(new Contact_queue<string>(contacto, correo, telefono));
 	}
-	
-	void mostrarAgenda() {
-		Random r;
-		string linea;
-		archivoAgenda.open("Agenda.txt", ios::in);
-		Console::ForegroundColor = ConsoleColor(r.Next(1, 16));
-		while (!archivoAgenda.eof()) {
-			getline(archivoAgenda, linea);
-			cout << linea << "\n";
+	void mostrar_Agenda() {
+		for (int i = 0; i < agenda.size(); i++)
+		{
+			agenda.at(i)->push_data();
+			agenda.at(i)->show_data();
 		}
 		_getch();
-		archivoAgenda.close();
 	}
-	void addMusica(string cancion, string genero, string artista) {
-		ColaMusica<string>* musica;
-		musica = new ColaMusica<string>(cancion, genero, artista);
-		musica->push_data();
-		musica->save__Data();
-		_getch();
+	void add_Musica(string cancion, string genero, string artista) {
+		musica.push_back(new Music_Queue<string>(cancion, genero, artista));
 	}
-	void mostrarMusica() {
-		Random r;
-		string linea;
-		archivoMusica.open("Musica.txt", ios::in);
-		Console::ForegroundColor = ConsoleColor(r.Next(1, 16));
-		while (!archivoMusica.eof()) {
-			getline(archivoMusica, linea);
-			cout << linea << "\n";
+	void mostrar_Musica() {
+		for (int i = 0; i < musica.size(); i++) {
+			musica.at(i)->push_data();
+			musica.at(i)->show_data();
 		}
-		_getch();
-		archivoMusica.close();
+	}
+	void add_Horario(string actividad, string horaI, string horaF) {
+		horario.push_back(new CHorario<string>(actividad, horaI, horaF));
+	}
+	void mostrar_Horario() {
+		for (int i = 0; i < horario.size(); i++) {
+			horario.at(i)->insertarhorario();
+			horario.at(i)->saveData();
+		}
 	}
 
 	void guardarTareas() {
