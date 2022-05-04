@@ -22,6 +22,32 @@ void creadores() {
 	_getch();
 	system("cls");
 }
+auto primer_menu = []() {
+	Console::ForegroundColor = ConsoleColor::Cyan;
+	cout << "\n\t -------------------------MENU-------------------------";
+	cout << "\n\t 1. Agregar Tarea";
+	cout << "\n\t 2. Agregar Evento";
+	cout << "\n\t 3. Agregar Recordatorio";
+	cout << "\n\t 4. Agregar Nota";
+	cout << "\n\t 5. Agregar Contacto";
+	cout << "\n\t 6. Agregar Musica";
+	cout << "\n\t 7. Agregar Horario";
+	cout << "\n\t 8. Mostrar Datos";
+	cout << "\n\t 9. QUIZZ :D";
+	cout << "\n\t 10. Bye bye";
+};
+function<void()> segundo_menu = []() {
+	Console::ForegroundColor = ConsoleColor::Cyan;
+	cout << "\n\t -------------------------MENU-------------------------";
+	cout << "\n\t 1. Mostrar Tareas";
+	cout << "\n\t 2. Mostrar Eventos";
+	cout << "\n\t 3. Mostrar Recordatorios";
+	cout << "\n\t 4. Mostrar Notas";
+	cout << "\n\t 5. Mostrar Contactos";
+	cout << "\n\t 6. Mostrar Canciones";
+	cout << "\n\t 7. Mostrar Horario";
+	cout << "\n\t 8. Bye bye";
+};
 void imprimir(function<void()>funcion) {
 	funcion();
 }
@@ -37,18 +63,7 @@ int main() {
 	while (true) {
 		do {
 			system("cls");
-			Console::ForegroundColor = ConsoleColor::Cyan;
-			cout << "\n\t -------------------------MENU-------------------------";
-			cout << "\n\t 1. Agregar Tarea";
-			cout << "\n\t 2. Agregar Evento";
-			cout << "\n\t 3. Agregar Recordatorio";
-			cout << "\n\t 4. Agregar Nota";
-			cout << "\n\t 5. Agregar Contacto";
-			cout << "\n\t 6. Agregar Musica";
-			cout << "\n\t 7. Agregar Horario";
-			cout << "\n\t 8. Mostrar Datos";
-			cout << "\n\t 9. QUIZZ :D";
-			cout << "\n\t 10. Bye bye";
+			imprimir(primer_menu);
 			cout << "\n\t    Ingresar opción:"; cin >> opc;
 		} while (opc != 1 && opc != 2 && opc != 3 && opc != 4 && opc != 5 && opc != 6 && opc != 7 && opc != 8 && opc != 9 && opc != 10);
 		system("cls");
@@ -162,16 +177,7 @@ int main() {
 		case 8:
 			do {
 				system("cls");
-				Console::ForegroundColor = ConsoleColor::Cyan;
-				cout << "\n\t -------------------------MENU-------------------------";
-				cout << "\n\t 1. Mostrar Tareas";
-				cout << "\n\t 2. Mostrar Eventos";
-				cout << "\n\t 3. Mostrar Recordatorios";
-				cout << "\n\t 4. Mostrar Notas";
-				cout << "\n\t 5. Mostrar Contactos";
-				cout << "\n\t 6. Mostrar Canciones";
-				cout << "\n\t 7. Mostrar Horario";
-				cout << "\n\t 8. Bye bye";
+				imprimir(segundo_menu);
 				cout << "\n\t    Ingresar opción:"; cin >> opc2;
 			} while (opc2 != 1 && opc2 != 2 && opc2 != 3 && opc2 != 4 && opc2 != 5 && opc2 != 6 && opc2 != 7 && opc2 != 8);
 			system("cls");
