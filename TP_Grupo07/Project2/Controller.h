@@ -4,19 +4,19 @@
 #include "CRecordatorio.h"
 #include "CTarea.h"
 #include "CAgenda.h"
+#include "Queue.h"
 #include "CHorario.h"
 #include "CMusica.h"
 class Controller
 {
 private:
-
 	vector<CTarea<string>*>tareas;
 	vector<CRecordatorio<string>*>recordatorios;
 	vector<CNota<string>*>notas;
 	vector<CEvento<string>*>eventos;
-	vector<Contact_queue<string>*>agenda;
-	vector<Music_Queue<string>*>musica;
-	vector<CHorario<string>*>horario;
+	Queue<Contact<string>*>agenda;
+	Queue<Music<string>*>musica;
+	Queue<CHorario<string>*>horario;
 	fstream archivoTareas, archivoEventos, archivoNotas, archivoRecordatorios,archivoAgenda, archivoMusica;
 public:
 	Controller() {
@@ -35,33 +35,25 @@ public:
 		eventos.push_back(new CEvento<string>(lugar, titulo, fecha, hora, descripcion, urgencia));
 	}
 	void add_Agenda(string contacto, string correo, string telefono) {
-		agenda.push_back(new Contact_queue<string>(contacto, correo, telefono));
+		agenda.enqueque(new Contact<string>(contacto, correo, telefono));
+		agenda.save([](Contact<string>* a) { a->guardar(); });
 	}
 	void mostrar_Agenda() {
-		for (int i = 0; i < agenda.size(); i++)
-		{
-			agenda.at(i)->push_data();
-			agenda.at(i)->show_data();
-		}
-		_getch();
+		agenda.print([](Contact<string>* a) {a->mostrar(); });
 	}
 	void add_Musica(string cancion, string genero, string artista) {
-		musica.push_back(new Music_Queue<string>(cancion, genero, artista));
+		musica.enqueque(new Music<string>(cancion, genero, artista));
+		musica.save([](Music<string>* a) { a->guardar(); });
 	}
 	void mostrar_Musica() {
-		for (int i = 0; i < musica.size(); i++) {
-			musica.at(i)->push_data();
-			musica.at(i)->show_data();
-		}
+		musica.print([](Music<string>* a) {a->mostrar(); });
 	}
 	void add_Horario(string actividad, string horaI, string horaF) {
-		horario.push_back(new CHorario<string>(actividad, horaI, horaF));
+		horario.enqueque(new CHorario<string>(actividad, horaI, horaF));
+		horario.save([](CHorario<string>* a) { a->guardar(); });
 	}
 	void mostrar_Horario() {
-		for (int i = 0; i < horario.size(); i++) {
-			horario.at(i)->insertarhorario();
-			horario.at(i)->saveData();
-		}
+		horario.print([](CHorario<string>* a) {a->mostrar(); });
 	}
 
 	void guardarTareas() {

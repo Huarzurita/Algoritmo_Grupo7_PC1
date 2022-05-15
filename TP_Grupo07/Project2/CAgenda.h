@@ -1,60 +1,39 @@
 #pragma once
 #include "Capp.h"
 template <class Generic>
-class Nodo1{
-public:
-	Generic com, com1, com2;
-	Nodo1<Generic>* siguiente;
-	Nodo1(Generic aux, Generic aux1, Generic aux2) {
-		com = aux;
-		com1 = aux1;
-		com2 = aux2;
-	}
-};
-template <class Generic>
-class Contact_queue
+class Contact
 {
-private:
-	Nodo1<Generic>* head;
-	Nodo1<Generic>* tail;
-	Generic contacto, correo, telefono;
 public:
-	Contact_queue(Generic contacto, Generic correo, Generic telefono) {
-		this->head = NULL;
-		this->tail = NULL;
-		this->contacto = contacto;
-		this->correo = correo;
-		this->telefono = telefono;
+	Contact(Generic contacto, Generic correo, Generic telefono): contacto(contacto), correo(correo), telefono(telefono) {
+		archivo.open("Contactos.txt", ios::out);
 	}
-	void push_data() {
-		Nodo1<Generic>* nodito = new Nodo1<Generic>(contacto,correo,telefono);
-		nodito->siguiente = NULL;
-		if (head == NULL) {
-			head = nodito;
-			tail = nodito;
-		}
-		else {
-			tail->siguiente = nodito;
-		}
-		tail = nodito;
+	~Contact(){}
+	Generic getcontacto() { return contacto; }
+	Generic getcorreo() { return correo; }
+	Generic gettelefono() { return telefono; }
+	void mostrar() {
+		cout << "\n";
+		cout << "\t |--------------------------------------------------------------------------------------------|" << "\n";
+		cout << "\t |                                  °INFORMACIÓN DEL CONTACTO°                                |" << "\n";
+		cout << "\t |--------------------------------------------------------------------------------------------|" << "\n";
+		cout << "\t      Nombre del contacto: " << contacto << endl;
+		cout << "\t      Correo del contacto: " << correo << endl;
+		cout << "\t      Telefono del contacto: " << telefono << endl;
+		cout << "\t |--------------------------------------------------------------------------------------------|" << "\n";
+		cout << "\n";
 	}
-	void show_data() {
-		if (head==NULL) {
-			cout << "La cola esta vacía" << "\n";
-		}
-		else {
-			while (head != NULL)
-			{
-				cout << "|--------------------------------------------------------------------------------------------|" << "\n";
-				cout << "|                                   °DATOS DEL CONTACTO°                                     |" << "\n";
-				cout << "|--------------------------------------------------------------------------------------------|" << "\n";
-				cout << "  Nombre del contacto: " << head->com << "\n";
-				cout << "  Correo de la tarea: " << head->com1 << "\n";
-				cout << "  Celular o teléfono del contacto: " << head->com2 << "\n";
-				cout << "|--------------------------------------------------------------------------------------------|" << "\n";
-				head = head->siguiente;
-			}
-		}
+	void guardar() {
+		archivo << "\n";
+		archivo << "\t |--------------------------------------------------------------------------------------------|" << "\n";
+		archivo << "\t |                                  °INFORMACIÓN DEL CONTACTO°                                |" << "\n";
+		archivo << "\t |--------------------------------------------------------------------------------------------|" << "\n";
+		archivo << "\t      Nombre del contacto: " << contacto << endl;
+		archivo << "\t      Correo del contacto: " << correo << endl;
+		archivo << "\t      Telefono del contacto: " << telefono << endl;
+		archivo << "\t |--------------------------------------------------------------------------------------------|" << "\n";
+		archivo << "\n";
 	}
-	~Contact_queue();
+private:
+	Generic contacto, correo, telefono;
+	fstream archivo;
 };

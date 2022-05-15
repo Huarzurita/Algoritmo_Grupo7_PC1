@@ -1,61 +1,39 @@
 #pragma once
 #include "Capp.h"
 template <class Generic>
-class Node {
-public:
-	Generic com, com1, com2;
-	Node<Generic>* siguiente;
-	Node(Generic aux, Generic aux1, Generic aux2) {
-		com = aux;
-		com1 = aux1;
-		com2 = aux2;
-	}
-};
-
-template <class Generic>
-class Music_Queue
+class Music
 {
-private:
-	Node<Generic>* head;
-	Node<Generic>* tail;
-	Generic cancion, genero, artista;
 public:
-	Music_Queue(Generic cancion, Generic genero, Generic artista) {
-		this->head = NULL;
-		this->tail = NULL;
-		this->cancion = cancion;
-		this->genero = genero;
-		this->artista = artista;
+	Music(Generic cancion, Generic genero, Generic artista) : cancion(cancion), genero(genero), artista(artista) {
+		archivo.open("Canciones.txt", ios::out);
 	}
-	void push_data() {
-		Node<Generic>* nodito = new Node<Generic>(cancion, genero, artista);
-		nodito->siguiente = NULL;
-		if (head == NULL) {
-			head = nodito;
-			tail = nodito;
-		}
-		else {
-			tail->siguiente = nodito;
-		}
-		tail = nodito;
+	~Music() {  }
+	Generic getcancion() { return cancion; }
+	Generic getgenero() { return genero; }
+	Generic getartista() { return artista; }
+	void mostrar() {
+		cout << "\n";
+		cout << "\t |--------------------------------------------------------------------------------------------|" << "\n";
+		cout << "\t |                                 °INFORMACIÓN DE LA CANCIÓN°                                |" << "\n";
+		cout << "\t |--------------------------------------------------------------------------------------------|" << "\n";
+		cout << "\t      Nombre de la canción: " << cancion << endl;
+		cout << "\t      Género de la canción: " << genero << endl;
+		cout << "\t      Artista de la canción: " << artista << endl;
+		cout << "\t |--------------------------------------------------------------------------------------------|" << "\n";
+		cout << "\n";
 	}
-	void show_data() {
-		if (head == NULL) {
-			cout << "La cola esta vacía" << "\n";
-		}
-		else {
-			while (head != NULL)
-			{
-				cout << "|--------------------------------------------------------------------------------------------|" << "\n";
-				cout << "|                                   °REGISTRO DE CANCIONES°                                  |" << "\n";
-				cout << "|--------------------------------------------------------------------------------------------|" << "\n";
-				cout << "  Nombre de la canción: " << head->com << "\n";
-				cout << "  Género de la canción: " << head->com1 << "\n";
-				cout << "  Artista de la canción: " << head->com2 << "\n";
-				cout << "|--------------------------------------------------------------------------------------------|" << "\n";
-				head = head->siguiente;
-			}
-		}
+	void guardar() {
+		archivo << "\n";
+		archivo << "\t |--------------------------------------------------------------------------------------------|" << "\n";
+		archivo << "\t |                                 °INFORMACIÓN DE LA CANCIÓN°                                |" << "\n";
+		archivo << "\t |--------------------------------------------------------------------------------------------|" << "\n";
+		archivo << "\t      Nombre de la canción: " << cancion << endl;
+		archivo << "\t      Género de la canción: " << genero << endl;
+		archivo << "\t      Artista de la canción: " << artista << endl;
+		archivo << "\t |--------------------------------------------------------------------------------------------|" << endl;
+		archivo << "\n";
 	}
-	~Music_Queue();
+public:
+	Generic cancion, genero, artista;
+	fstream archivo;
 };

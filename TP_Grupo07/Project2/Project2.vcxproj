@@ -124,6 +124,8 @@
     <ClInclude Include="CQuizz.h" />
     <ClInclude Include="CRecordatorio.h" />
     <ClInclude Include="CTarea.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="Queue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

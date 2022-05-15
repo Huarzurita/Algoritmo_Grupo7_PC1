@@ -1,18 +1,27 @@
 |--------------------------------------------------------------------------------------------|
 |                                   °INFORMACIÓN DE LA TAREA°                                |
 |--------------------------------------------------------------------------------------------|
-   Título de la tarea: FRFRF
-   Fecha de la tarea: RFRF
-   Hora de la tarea: RFRFR
-   Urgencia de la tarea: FRFR
+   Título de la tarea: dd
+   Fecha de la tarea: d
+   Hora de la tarea: dd
+   Urgencia de la tarea: d
    Estado de la tarea: 
 |--------------------------------------------------------------------------------------------|
 |--------------------------------------------------------------------------------------------|
 |                                   °INFORMACIÓN DE LA TAREA°                                |
 |--------------------------------------------------------------------------------------------|
-   Título de la tarea: DEDE
-   Fecha de la tarea: DEDED
-   Hora de la tarea: EDEDED
-   Urgencia de la tarea: 
+   Título de la tarea: FFF
+   Fecha de la tarea: FFFF
+   Hora de la tarea: FFF
+   Urgencia de la tarea: F
+   Estado de la tarea: 
+|--------------------------------------------------------------------------------------------|
+|--------------------------------------------------------------------------------------------|
+|                                   °INFORMACIÓN DE LA TAREA°                                |
+|--------------------------------------------------------------------------------------------|
+   Título de la tarea: SSS
+   Fecha de la tarea: SSS
+   Hora de la tarea: S
+   Urgencia de la tarea: S
    Estado de la tarea: 
 |--------------------------------------------------------------------------------------------|

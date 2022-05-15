@@ -5,48 +5,56 @@ using namespace std;
 
 void creadores() {
 	Console::ForegroundColor = ConsoleColor::Magenta;
-	Console::SetCursorPosition(20, 5);
-	cout << "-----------------------------------------------------------------------------------";
-	Console::SetCursorPosition(20, 6);
-	cout << "----------------------------------ORGANIZE YOU-------------------------------------";
-	Console::SetCursorPosition(20, 7);
-	cout << "-----------------------------------------------------------------------------------";
-	Console::SetCursorPosition(40, 10);
-	cout << "CREADO POR:";
-	Console::SetCursorPosition(40, 11);
-	cout << "André Alonso Arroyo Ormeño";
-	Console::SetCursorPosition(40, 12);
-	cout << "Jessica Elizabeth Comettant Rubiños";
-	Console::SetCursorPosition(40, 13);
-	cout << "Miguel Alejandro Daniel Huarcaya Chavez";
+	Console::SetCursorPosition(12, 9);
+	cout << "|--------------------------------------------------------------------------------------------|";
+	Console::SetCursorPosition(12, 10);
+	cout << "|                                      °ORGANIZE YOU°                                        |";
+	Console::SetCursorPosition(12, 11);
+	cout << "|--------------------------------------------------------------------------------------------|";
+	Console::SetCursorPosition(12, 12);
+	cout << "|  CREADO POR:                                                                               |";
+	Console::SetCursorPosition(12, 13);
+	cout << "| " << char(16) << " André Alonso Arroyo Ormeño                                                               |";
+	Console::SetCursorPosition(12, 14);
+	cout << "| " << char(16) << " Jessica Elizabeth Comettant Rubiños                                                      |";
+	Console::SetCursorPosition(12, 15);
+	cout << "| " << char(16) << " Miguel Alejandro Daniel Huarcaya Chavez                                                  |";
+	Console::SetCursorPosition(12, 16);
+	cout << "|--------------------------------------------------------------------------------------------|";
 	_getch();
 	system("cls");
 }
-auto primer_menu = []() {
+auto primer_menu = []()->void {
 	Console::ForegroundColor = ConsoleColor::Cyan;
-	cout << "\n\t -------------------------MENU-------------------------";
-	cout << "\n\t 1. Agregar Tarea";
-	cout << "\n\t 2. Agregar Evento";
-	cout << "\n\t 3. Agregar Recordatorio";
-	cout << "\n\t 4. Agregar Nota";
-	cout << "\n\t 5. Agregar Contacto";
-	cout << "\n\t 6. Agregar Musica";
-	cout << "\n\t 7. Agregar Horario";
-	cout << "\n\t 8. Mostrar Datos";
-	cout << "\n\t 9. QUIZZ :D";
-	cout << "\n\t 10. Bye bye";
+	cout << "\t|--------------------------------------------------------------------------------------------|"<<endl;
+	cout << "\t|                                          °MENÚ°                                            |"<<endl;
+	cout << "\t|--------------------------------------------------------------------------------------------|"<<endl;
+	cout << "\t| 1. Agregar Tarea                                                                           |"<<endl;
+	cout << "\t| 2. Agregar Evento                                                                          |"<<endl;
+	cout << "\t| 3. Agregar Recordatorio                                                                    |"<<endl;
+	cout << "\t| 4. Agregar Nota                                                                            |"<<endl;
+	cout << "\t| 5. Agregar Contacto                                                                        |"<<endl;
+	cout << "\t| 6. Agregar Musica                                                                          |"<<endl;
+	cout << "\t| 7. Agregar Horario                                                                         |"<<endl;
+	cout << "\t| 8. Mostrar Datos                                                                           |"<<endl;
+	cout << "\t| 9. QUIZZ :D                                                                                |"<<endl;
+	cout << "\t| 10. Bye bye                                                                                |"<<endl;
+	cout << "\t|--------------------------------------------------------------------------------------------|" << endl;
 };
 function<void()> segundo_menu = []() {
 	Console::ForegroundColor = ConsoleColor::Cyan;
-	cout << "\n\t -------------------------MENU-------------------------";
-	cout << "\n\t 1. Mostrar Tareas";
-	cout << "\n\t 2. Mostrar Eventos";
-	cout << "\n\t 3. Mostrar Recordatorios";
-	cout << "\n\t 4. Mostrar Notas";
-	cout << "\n\t 5. Mostrar Contactos";
-	cout << "\n\t 6. Mostrar Canciones";
-	cout << "\n\t 7. Mostrar Horario";
-	cout << "\n\t 8. Bye bye";
+	cout << "\t|--------------------------------------------------------------------------------------------|"<<endl;
+	cout << "\t|                                          °MENÚ°                                            |"<<endl;
+	cout << "\t|--------------------------------------------------------------------------------------------|"<<endl;
+	cout << "\t| 1. Mostrar Tareas                                                                          |"<<endl;
+	cout << "\t| 2. Mostrar Eventos                                                                         |"<<endl;
+	cout << "\t| 3. Mostrar Recordatorios                                                                   |"<<endl;
+	cout << "\t| 4. Mostrar Notas                                                                           |"<<endl;
+	cout << "\t| 5. Mostrar Contactos                                                                       |"<<endl;
+	cout << "\t| 6. Mostrar Canciones                                                                       |"<<endl;
+	cout << "\t| 7. Mostrar Horario                                                                         |"<<endl;
+	cout << "\t| 8. Bye bye                                                                                 |"<<endl;
+	cout << "\t|--------------------------------------------------------------------------------------------|" << endl;
 };
 void imprimir(function<void()>funcion) {
 	funcion();
@@ -54,36 +62,29 @@ void imprimir(function<void()>funcion) {
 
 int main() {
 	setlocale(LC_ALL, "esp");
-	srand(time(NULL));
 	Quizz<string> q = Quizz<string>();
-	string a, titulo, fecha, hora, urgencia, completado, lugar, descripcion, contacto, correo, telefono,cancion,genero,artista, actividad,horaI, horaF;
-	int opc, opc2,opc3;
-	imprimir(creadores);
 	Controller* controller = new Controller();
+	int opc, opc2, opc3;
+	string a, titulo, fecha, hora, urgencia, completado, lugar, descripcion, contacto, correo, telefono,cancion,genero,artista, actividad,horaI, horaF;
+	imprimir(creadores);
 	while (true) {
 		do {
 			system("cls");
 			imprimir(primer_menu);
 			cout << "\n\t    Ingresar opción:"; cin >> opc;
-		} while (opc != 1 && opc != 2 && opc != 3 && opc != 4 && opc != 5 && opc != 6 && opc != 7 && opc != 8 && opc != 9 && opc != 10);
+		} while (opc <1 || opc>10);
 		system("cls");
 		switch (opc) {
 		case 1:
 			Console::ForegroundColor = ConsoleColor::Gray;
-			cout << " INGRESE LOS DATOS SOLICITADOS" << "\n";
-			getline(cin, a);
-			cout << "\n Ingresar título de la tarea: \n";
-			getline(cin, titulo);
-			cout << "\n Ingresar fecha de la tarea:\n ";
-			getline(cin, fecha);
-			cout << "\n Ingresar hora de la tarea: \n";
-			getline(cin, hora);
-			cout << "\n Ingresar urgencia de la tarea: \n";
-			getline(cin, urgencia);
+			cout << "\t INGRESE LOS DATOS SOLICITADOS" << endl;getline(cin, a);
+			cout << "\t  Ingresar título de la tarea: ";getline(cin, titulo);
+			cout << "\t  Ingresar fecha de la tarea: ";getline(cin, fecha);
+			cout << "\t  Ingresar hora de la tarea: ";getline(cin, hora);
+			cout << "\t  Ingresar urgencia de la tarea: ";getline(cin, urgencia);
 			do
 			{
-				cout << "\n Ingresar si la tarea ha sido completada (SI o NO): ";
-				getline(cin, completado);
+				cout << "\t  Ingresar si la tarea ha sido completada (SI o NO): ";getline(cin, completado);
 			} while (completado != "SI" && completado != "NO");
 			controller->addTarea(completado, titulo, fecha, hora, urgencia);
 			controller->guardarTareas();
@@ -91,85 +92,60 @@ int main() {
 			break;
 		case 2:
 			Console::ForegroundColor = ConsoleColor::Gray;
-			cout << " INGRESE LOS DATOS SOLICITADOS" << "\n";
-			getline(cin, a);
-			cout << "\n Ingresar título del evento: \n";
-			getline(cin, titulo);
-			cout << "\n Ingresar fecha del evento:  \n";
-			getline(cin, fecha);
-			cout << "\n Ingresar hora del evento: \n";
-			getline(cin, hora);
-			cout << "\n Ingresar lugar del evento: \n";
-			getline(cin, lugar);
-			cout << "\n Ingresar urgencia del evento: \n";
-			getline(cin, urgencia);
-			cout << "\n Ingresar descripción del evento: \n";
-			getline(cin, descripcion);
+			cout << "\t INGRESE LOS DATOS SOLICITADOS" << endl;getline(cin, a);
+			cout << "\t  Ingresar título del evento: ";getline(cin, titulo);
+			cout << "\t  Ingresar fecha del evento: ";getline(cin, fecha);
+			cout << "\t  Ingresar hora del evento: ";getline(cin, hora);
+			cout << "\t  Ingresar lugar del evento: ";getline(cin, lugar);
+			cout << "\t  Ingresar urgencia del evento: ";getline(cin, urgencia);
+			cout << "\t  Ingresar descripción del evento: ";getline(cin, descripcion);
 			controller->addEvento(lugar, titulo, fecha, hora, descripcion, urgencia);
 			controller->guardarEventos();
-
 			_getch();
 			break;
 		case 3:
 			Console::ForegroundColor = ConsoleColor::Gray;
-			cout << " INGRESE LOS DATOS SOLICITADOS" << "\n";
-			getline(cin, a);
-			cout << "\n Ingresar título del recordatorio: \n";
-			getline(cin, titulo);
-			cout << "\n Ingresar fecha del recordatorio:  \n";
-			getline(cin, fecha);
-			cout << "\n Ingresar hora del recordatorio: \n";
-			getline(cin, hora);
-			cout << "\n Ingresar urgencia del recordatorio: \n";
-			getline(cin, urgencia);
+			cout << "\t INGRESE LOS DATOS SOLICITADOS" << endl;getline(cin, a);
+			cout << "\t  Ingresar título del recordatorio: ";getline(cin, titulo);
+			cout << "\t  Ingresar fecha del recordatorio: ";getline(cin, fecha);
+			cout << "\t  Ingresar hora del recordatorio: ";getline(cin, hora);
+			cout << "\t  Ingresar urgencia del recordatorio: ";getline(cin, urgencia);
 			controller->addRecordatorio(titulo, fecha, hora, urgencia);
 			controller->guardarRecordatorios();
 			_getch();
 			break;
 		case 4:
 			Console::ForegroundColor = ConsoleColor::Gray;
-			cout << " INGRESE LOS DATOS SOLICITADOS" << "\n";
-			getline(cin, a);
-			cout << "\n Ingresar título de la nota: \n";
-			getline(cin, titulo);
-			cout << "\n Ingresar descripción de la nota:  \n";
-			getline(cin, descripcion);
+			cout << "\t INGRESE LOS DATOS SOLICITADOS" << endl;getline(cin, a);
+			cout << "\t  Ingresar título de la nota: ";getline(cin, titulo);
+			cout << "\t  Ingresar descripción de la nota: ";getline(cin, descripcion);
 			controller->addNota(titulo, descripcion);
 			controller->guardarNotas();
 			_getch();
 			break;
 		case 5:
 			Console::ForegroundColor = ConsoleColor::Gray;
-			cout << " INGRESE LOS DATOS SOLICITADOS" << "\n";
-			getline(cin, a);
-			cout << "\n Ingresar nombre del contacto: \n";
-			getline(cin, contacto);
-			cout << "\n Ingresar correo del contacto: \n";
-			getline(cin, correo);
-			cout << "\n Ingresar teléfono del contacto:  \n";
-			getline(cin, telefono);
+			cout << "\t INGRESE LOS DATOS SOLICITADOS" << endl;getline(cin, a);
+			cout << "\t  Ingresar nombre del contacto: ";getline(cin, contacto);
+			cout << "\t  Ingresar correo del contacto: ";getline(cin, correo);
+			cout << "\t  Ingresar teléfono del contacto: ";getline(cin, telefono);
 			controller->add_Agenda(contacto, correo, telefono);
 			_getch();
 			break;
 		case 6:
 			Console::ForegroundColor = ConsoleColor::Gray;
-			cout << " INGRESE LOS DATOS SOLICITADOS" << "\n";
-			getline(cin, a);
-			cout << "\n Ingresar nombre de la canción: \n";
-			getline(cin, cancion);
-			cout << "\n Ingresar género de la canción: \n";
-			getline(cin, genero);
-			cout << "\n Ingresar artista de la canción:  \n";
-			getline(cin, artista);
+			cout << "\t INGRESE LOS DATOS SOLICITADOS: " << endl; getline(cin, a);
+			cout << "\t  Ingresar nombre de la canción: ";getline(cin, cancion);
+			cout << "\t  Ingresar género de la canción: ";getline(cin, genero);
+			cout << "\t  Ingresar artista de la canción: ";getline(cin, artista);
 			controller->add_Musica(cancion, genero, artista);
 			_getch();
 			break;
 		case 7:
-			Console::ForegroundColor = ConsoleColor::Green;
-			cout << "Ingrese los datos solicitados:\n"; getline(cin, a);
-			cout << "Ingrese el nombre de la actividad:\n"; getline(cin, actividad);
-			cout << "Ingrese la hora inicial:\n"; getline(cin, horaI);
-			cout << "Ingrese la hora final:\n"; getline(cin, horaF);
+			cout << "\t INGRESE LOS DATOS SOLICITADOS: " << endl; getline(cin, a);
+			cout << "\t  Ingrese el nombre de la actividad: "; getline(cin, actividad);
+			cout << "\t  Ingrese la hora inicial: "; getline(cin, horaI);
+			cout << "\t  Ingrese la hora final: "; getline(cin, horaF);
 			controller->add_Horario(actividad, horaI, horaF);
 			_getch();
 			break;
@@ -179,7 +155,7 @@ int main() {
 				system("cls");
 				imprimir(segundo_menu);
 				cout << "\n\t    Ingresar opción:"; cin >> opc2;
-			} while (opc2 != 1 && opc2 != 2 && opc2 != 3 && opc2 != 4 && opc2 != 5 && opc2 != 6 && opc2 != 7 && opc2 != 8);
+			} while (opc2 < 1 || opc>8);
 			system("cls");
 			break;
 		case 9:
@@ -187,19 +163,17 @@ int main() {
 			{
 				system("cls");
 				Console::ForegroundColor = ConsoleColor::Yellow;
-				cout << " [1] Insertar pregunta al quizz" << "\n";
-				cout << " [2] Comenzar Quizz" << "\n";
-				cout << " [3] Salir" << "\n";
-				cin >> opc3;
-
+				cout << "\t|------------------------------------|" << endl;
+				cout << "\t| [1] Insertar pregunta al quizz     |" << endl;
+				cout << "\t| [2] Comenzar Quizz                 |" << endl;
+				cout << "\t| [3] Salir                          |" << endl;
+				cout << "\t|------------------------------------|" << endl;
+				cout << "\n\t    Ingresar opción:"; cin >> opc3;
 				if (opc3 == 1) {
 					string dp, dr;
 					system("cls");
-					cout << "Ingrese pregunta " << "\n";
-					cin >> dp;
-					cout << "Ingrese rspta" << "\n";
-					cin >> dr;
-
+					cout << "\t Ingrese pregunta: "; cin >> dp; cout << endl;
+					cout << "\t Ingrese respuesta:";cin >> dr; cout << endl;
 					q.Push(dp, dr);
 					system("pause");
 				}
@@ -217,46 +191,20 @@ int main() {
 			exit(0);
 			break;
 		}
-		auto fun = [opc2, controller]() {//lambda
+		auto fun = [opc2, controller]() {
 			switch (opc2)
 			{
-			case 1:
-				controller->mostrarTareas();
-				_getch();
-				break;
-			case 2:
-				controller->mostrarEventos();
-				_getch();
-				break;
-			case 3:
-				controller->mostrarRecordatorios();
-				_getch();
-				break;
-			case 4:
-				controller->mostrarNotas();
-				_getch();
-				break;
-			case 5:
-				controller->mostrar_Agenda();
-				_getch();
-				break;
-			case 6:
-				controller->mostrar_Musica();
-				_getch();
-				break;
-			case 7:
-				controller->mostrar_Horario();
-				_getch();
-				break;
-			case 8:
-				exit(0);
-				break;
+			case 1:	controller->mostrarTareas();_getch();break;
+			case 2:controller->mostrarEventos();_getch();break;
+			case 3:controller->mostrarRecordatorios();_getch();break;
+			case 4:controller->mostrarNotas();_getch();break;
+			case 5:Console::ForegroundColor = ConsoleColor::Yellow;controller->mostrar_Agenda();_getch();break;
+			case 6:Console::ForegroundColor = ConsoleColor::Red;controller->mostrar_Musica();_getch();break;
+			case 7:Console::ForegroundColor = ConsoleColor::Green;controller->mostrar_Horario();_getch();break;
+			case 8:break;
 			}
 		};
-		if (opc == 8)
-		{
-			fun();
-		}
+		if (opc == 8){	fun();}
 	}
 	_getch();
 	return 0;
