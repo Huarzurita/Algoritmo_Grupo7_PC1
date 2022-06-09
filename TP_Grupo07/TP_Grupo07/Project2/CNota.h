@@ -1,16 +1,13 @@
 #pragma once
 #include "Capp.h"
-template<class t>
+template<class Generic>
 class CNota 
 {
 private:
-	t titulo, descripcion;
+	Generic titulo, descripcion;
 public:
-	CNota(t titulo, t descripcion) {
-		this->titulo = titulo;
-		this->descripcion = descripcion;
-	}
-	t getTitulo() { return titulo; }
-	t getDescripcion() { return descripcion; }
+	CNota(Generic titulo, Generic descripcion):titulo(titulo),descripcion(descripcion) {}
+	Generic getTitulo() { return titulo; }
+	Generic getDescripcion() { return descripcion; }
 	~CNota() {}
 };

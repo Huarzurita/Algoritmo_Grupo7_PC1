@@ -1,21 +1,13 @@
 ﻿  main.cpp
-D:\visual\CICLO III\Borrador\TP_Grupo07\Project2\Controller.h(73,21): warning C4018: '<': no coinciden signed/unsigned
-D:\visual\CICLO III\Borrador\TP_Grupo07\Project2\Controller.h(104,21): warning C4018: '<': no coinciden signed/unsigned
-D:\visual\CICLO III\Borrador\TP_Grupo07\Project2\Controller.h(136,21): warning C4018: '<': no coinciden signed/unsigned
-D:\visual\CICLO III\Borrador\TP_Grupo07\Project2\Controller.h(164,21): warning C4018: '<': no coinciden signed/unsigned
-D:\visual\CICLO III\Borrador\TP_Grupo07\Project2\Stack.h(37,27): warning C4018: '<': no coinciden signed/unsigned
-D:\visual\CICLO III\Borrador\TP_Grupo07\Project2\Stack.h(35): message : al compilar la función del miembro clase plantilla "void Stack<CHorario<std::string> *>::print_save(std::function<void (Generic)>)"
-          with
-          [
-              Generic=CHorario<std::string> *
-          ]
-D:\visual\CICLO III\Borrador\TP_Grupo07\Project2\Controller.h(60): message : Vea la referencia a la creación de una instancia de la función plantilla "void Stack<CHorario<std::string> *>::print_save(std::function<void (Generic)>)" que se está compilando
-          with
-          [
-              Generic=CHorario<std::string> *
-          ]
-D:\visual\CICLO III\Borrador\TP_Grupo07\Project2\Controller.h(26): message : Vea la referencia a la creación de una instancia de clase plantilla "Stack<CHorario<std::string> *>" que se está compilando
-D:\visual\CICLO III\Borrador\TP_Grupo07\Project2\Queue.h(54): warning C4715: 'Queue<Contact<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > *>::empty': no todas las rutas de acceso de control devuelven un valor
-D:\visual\CICLO III\Borrador\TP_Grupo07\Project2\Queue.h(54): warning C4715: 'Queue<Music<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > *>::empty': no todas las rutas de acceso de control devuelven un valor
+D:\visual\CICLO III\Borrador\TP_Grupo07\TP_Grupo07\Project2\Controller.h(79,21): warning C4018: '<': no coinciden signed/unsigned
+D:\visual\CICLO III\Borrador\TP_Grupo07\TP_Grupo07\Project2\Controller.h(110,21): warning C4018: '<': no coinciden signed/unsigned
+D:\visual\CICLO III\Borrador\TP_Grupo07\TP_Grupo07\Project2\Controller.h(142,21): warning C4018: '<': no coinciden signed/unsigned
+D:\visual\CICLO III\Borrador\TP_Grupo07\TP_Grupo07\Project2\Controller.h(170,21): warning C4018: '<': no coinciden signed/unsigned
+D:\visual\CICLO III\Borrador\TP_Grupo07\TP_Grupo07\Project2\Stack.h(39,27): warning C4018: '<': no coinciden signed/unsigned
+D:\visual\CICLO III\Borrador\TP_Grupo07\TP_Grupo07\Project2\Stack.h(37): message : al compilar la función del miembro clase plantilla "void Stack<CHorario<std::string> *>::print(void)"
+D:\visual\CICLO III\Borrador\TP_Grupo07\TP_Grupo07\Project2\Controller.h(65): message : Vea la referencia a la creación de una instancia de la función plantilla "void Stack<CHorario<std::string> *>::print(void)" que se está compilando
+D:\visual\CICLO III\Borrador\TP_Grupo07\TP_Grupo07\Project2\Controller.h(27): message : Vea la referencia a la creación de una instancia de clase plantilla "Stack<CHorario<std::string> *>" que se está compilando
+D:\visual\CICLO III\Borrador\TP_Grupo07\TP_Grupo07\Project2\Queue.h(59): warning C4715: 'Queue<Contact<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > *>::empty': no todas las rutas de acceso de control devuelven un valor
+D:\visual\CICLO III\Borrador\TP_Grupo07\TP_Grupo07\Project2\Queue.h(59): warning C4715: 'Queue<Music<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > *>::empty': no todas las rutas de acceso de control devuelven un valor
   main.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
-  Project2.vcxproj -> D:\visual\CICLO III\Borrador\TP_Grupo07\Debug\Project2.exe
+  Project2.vcxproj -> D:\visual\CICLO III\Borrador\TP_Grupo07\TP_Grupo07\Debug\Project2.exe

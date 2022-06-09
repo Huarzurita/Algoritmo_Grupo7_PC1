@@ -8,6 +8,7 @@
 #include "CHorario.h"
 #include "CMusica.h"
 #include "CQuizz.h"
+#include "List.h"
 #include "Stack.h"
 class Controller
 {
@@ -19,14 +20,15 @@ private:
 	Queue<Contact<string>*>*agenda;
 	Queue<Music<string>*>*musica;
 	Stack<CHorario<string>*>*horario;
-	Quizz<string> quizz;
+	List<Quizz<string>*>* quizz;
 	fstream archivoTareas, archivoEventos, archivoNotas, archivoRecordatorios,archivoAgenda, archivoMusica;
 public:
 	Controller() {
-		horario = new Stack<CHorario<string>*>();
-		musica = new Queue<Music<string>*>();
-		agenda = new Queue<Contact<string>*>();
-	};
+		horario = new Stack<CHorario<string>*>([](CHorario<string>* a) {a->mostrar(); }, [](CHorario<string>* a) { a->guardar(); });
+		musica = new Queue<Music<string>*>([](Music<string>* a) {a->mostrar(); }, [](Music<string>* a) { a->guardar(); });
+		agenda = new Queue<Contact<string>*>([](Contact<string>* a) {a->mostrar(); }, [](Contact<string>* a) { a->guardar(); });
+		quizz = new List<Quizz<string>*>([](Quizz<string>* a) {a->Print();}, [](Quizz<string>* a) { a->Save(); });
+	}
 	~Controller() {};
 	void addTarea(string completado, string titulo, string fecha, string hora, string urgencia) {
 		tareas.push_back(new CTarea<string>(completado, titulo, fecha, hora, urgencia));
@@ -42,28 +44,32 @@ public:
 	}
 	void add_Agenda(string contacto, string correo, string telefono) {
 		agenda->enqueque(new Contact<string>(contacto, correo, telefono));
+		agenda->save(new Contact<string>(contacto, correo, telefono));
 	}
 	void mostrar_Agenda() {
-		agenda->print_save([](Contact<string>* a) {a->mostrar(); a->guardar(); });
+		agenda->print();
 	}
 	void add_Musica(string cancion, string genero, string artista) {
 		musica->enqueque(new Music<string>(cancion, genero, artista));
+		musica->save(new Music<string>(cancion, genero, artista));
 	}
 	void mostrar_Musica() {
-		musica->print_save([](Music<string>* a) {a->mostrar(); a->guardar(); });
+		musica->print();
 	}
 	void add_Horario(string actividad, string horaI, string horaF) {
 		horario->push_back(new CHorario<string>(actividad, horaI, horaF));
+		horario->save(new CHorario<string>(actividad, horaI, horaF));
 	}
 
 	void mostrar_Horario() {
-		horario->print_save([](CHorario<string>* a) { a->mostrar(); a->guardar(); });
+		horario->print();
 	}
 	void add_quizz(string pregunta, string respuesta) {
-		quizz.Push(pregunta, respuesta);
+		quizz->pushBack(new Quizz<string>(pregunta,respuesta));
+		quizz->save(new Quizz<string>(pregunta, respuesta));
 	}
 	void mostrar_quizz() {
-		quizz.Print();
+		quizz->print();
 	}
 
 	void guardarTareas() {

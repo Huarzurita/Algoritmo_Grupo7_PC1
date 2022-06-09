@@ -1,20 +1,15 @@
 #pragma once
 #include "Capp.h"
-template<class t>
+template<class Generic>
 class CRecordatorio 
 {
 private:
-	t titulo, fecha, hora, urgencia;
+	Generic titulo, fecha, hora, urgencia;
 public:
-	CRecordatorio(t titulo, t fecha, t hora, t urgencia) {
-		this->titulo = titulo;
-		this->fecha = fecha;
-		this->hora = hora;
-		this->urgencia = urgencia;
-	}
-	t getTitulo() { return titulo; }
-	t getFecha() { return fecha; }
-	t getHora() { return hora; }
-	t getUrgencia() { return urgencia; }
+	CRecordatorio(Generic titulo, Generic fecha, Generic hora, Generic urgencia):titulo(titulo),fecha(fecha),hora(hora),urgencia(urgencia) {}
+	Generic getTitulo() { return titulo; }
+	Generic getFecha() { return fecha; }
+	Generic getHora() { return hora; }
+	Generic getUrgencia() { return urgencia; }
 	~CRecordatorio() {}
 };

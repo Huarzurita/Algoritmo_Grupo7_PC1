@@ -14,7 +14,9 @@ class Queue
 public:
 	Node<Generic>* head, * tail;
 	size_t siz;
-	Queue() {
+	function<void(Generic)> mostrar; 
+	function<void(Generic)> guardar;
+	Queue(function<void(Generic)> mostrar, function<void(Generic)> guardar):mostrar(mostrar), guardar(guardar) {
 		head = tail = nullptr;
 		siz = 0;
 	}
@@ -32,15 +34,18 @@ public:
 		cout << endl;
 		siz++;
 	}
-	void print_save(function<void(Generic)>imprimir) {
+	void save(Generic elem) {
+		guardar(elem);
+	}
+	void print() {
 		if (siz > 0) {
 			Node<Generic>* aux = head;
 			while (aux->next != nullptr) {
-				imprimir(aux->date);
+				mostrar(aux->date);
 				aux = aux->next;
 			}
 			if (aux->next == nullptr) {
-				imprimir(aux->date);
+				mostrar(aux->date);
 			}
 			cout << endl;
 		}

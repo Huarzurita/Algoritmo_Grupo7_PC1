@@ -11,7 +11,9 @@ class Stack {
 public:
     Node4<Generic>* first, * last;
     size_t siz;
-    Stack() {
+    function<void(Generic)> mostrar;
+    function<void(Generic)> guardar;
+    Stack(function<void(Generic)> mostrar, function<void(Generic)> guardar):mostrar(mostrar), guardar(guardar) {
         first = last = nullptr;
         siz = 0;
     }
@@ -29,15 +31,18 @@ public:
         }
         return aux;
     }
-    int size() {
+    size_t size() {
         return siz;
     }
-    void print_save(function<void(Generic)> imprimir){
+    void print(){
         Node4<Generic>* aux = first;
         for (int i = 0; i < siz; i++) {
-            imprimir(aux->elem);
+            mostrar(aux->elem);
             aux = aux->next;
         }
+    }
+    void save(Generic elem) {
+        guardar(elem);
     }
 
     ~Stack() {}
