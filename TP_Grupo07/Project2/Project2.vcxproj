@@ -125,7 +125,7 @@
     <ClInclude Include="CRecordatorio.h" />
     <ClInclude Include="CTarea.h" />
     <ClInclude Include="List.h" />
-    <ClInclude Include="SortAlgorithms.h" />
+    <ClInclude Include="AdvanceSort.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="Queue.h" />
   </ItemGroup>

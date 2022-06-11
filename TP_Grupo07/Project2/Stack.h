@@ -11,8 +11,7 @@ class Stack {
 public:
     Node4<Generic>* first, * last;
     size_t siz;
-    function<void(Generic)> mostrar;
-    function<void(Generic)> guardar;
+    function<void(Generic)> mostrar, guardar;
     Stack(function<void(Generic)> mostrar, function<void(Generic)> guardar):mostrar(mostrar), guardar(guardar) {
         first = last = nullptr;
         siz = 0;

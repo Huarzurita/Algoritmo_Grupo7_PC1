@@ -14,8 +14,7 @@ class Queue
 public:
 	Node<Generic>* head, * tail;
 	size_t siz;
-	function<void(Generic)> mostrar; 
-	function<void(Generic)> guardar;
+	function<void(Generic)> mostrar, guardar;
 	Queue(function<void(Generic)> mostrar, function<void(Generic)> guardar):mostrar(mostrar), guardar(guardar) {
 		head = tail = nullptr;
 		siz = 0;

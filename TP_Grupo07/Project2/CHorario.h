@@ -14,7 +14,7 @@ public:
 	void mostrar() {
 		cout << "\n";
 		cout << "\t |--------------------------------------------------------------------------------------------|" << "\n";
-		cout << "\t |                                   °REGISTRO DE ACTIVIDADES°                                  |" << "\n";
+		cout << "\t |                                   °REGISTRO DE ACTIVIDADES°                                |" << "\n";
 		cout << "\t |--------------------------------------------------------------------------------------------|" << "\n";
 		cout << "\t      Nombre de la actividad: " << actividad << endl;
 		cout << "\t      Hora de inicio: " << hora_I << endl;

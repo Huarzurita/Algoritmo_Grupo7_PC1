@@ -1,16 +1,14 @@
 #pragma once
 #include "Capp.h"
-template <class Generic>
+template <class Generic, class Generic2>
 class Contact
 {
 public:
-	Contact(Generic contacto, Generic correo, Generic telefono): contacto(contacto), correo(correo), telefono(telefono) {
-		archivo.open("Contactos.txt", ios::app);
-	}
+	Contact(Generic2 telefono, Generic correo, Generic contacto): contacto(contacto), correo(correo), telefono(telefono) {}
 	~Contact(){}
 	Generic getcontacto() { return contacto; }
 	Generic getcorreo() { return correo; }
-	Generic gettelefono() { return telefono; }
+	Generic2 gettelefono() { return telefono; }
 	void mostrar() {
 		cout << "\n";
 		cout << "\t |--------------------------------------------------------------------------------------------|" << "\n";
@@ -22,17 +20,7 @@ public:
 		cout << "\t |--------------------------------------------------------------------------------------------|" << "\n";
 		cout << "\n";
 	}
-	void guardar() {
-		archivo << "--------------------------------------------------------------------------------------------" << "\n";
-		archivo << "                                  °INFORMACIÓN DEL CONTACTO°                                " << "\n";
-		archivo << "--------------------------------------------------------------------------------------------" << "\n";
-		archivo << "     Nombre del contacto: " << contacto << endl;
-		archivo << "     Correo del contacto: " << correo << endl;
-		archivo << "     Telefono del contacto: " << telefono << endl;
-		archivo << "--------------------------------------------------------------------------------------------" << "\n";
-		archivo << "\n";
-	}
 private:
-	Generic contacto, correo, telefono;
-	fstream archivo;
+	Generic contacto, correo;
+	Generic2 telefono;
 };

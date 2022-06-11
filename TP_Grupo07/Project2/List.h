@@ -1,29 +1,28 @@
 #include "Capp.h"
-template<class T>
+template<class Generic>
 class List {
 public:
     class Node {
     public:
-        T value;
+        Generic value;
         Node* next;
-        Node(T value, Node* next = nullptr) : value(value), next(next) {}
+        Node(Generic value, Node* next = nullptr) : value(value), next(next) {}
     };
 private:
-    Node* inicio;
-    Node* fin;
+    Node* first;
+    Node* last;
     unsigned long size;
-    function<void(T)> mostrar;
-    function<void(T)> guardar;
+    function<void(Generic)> mostrar, guardar;
 public:
-    List(function<void(T)> mostrar, function<void(T)> guardar) : mostrar(mostrar), guardar(guardar) {
-        inicio = fin = nullptr;
+    List(function<void(Generic)> mostrar, function<void(Generic)> guardar) : mostrar(mostrar), guardar(guardar) {
+        first = last = nullptr;
         size = 0;
     }
     ~List() {
         while (size > 0) {
             popFront();
         }
-        inicio = fin = nullptr;
+        first = last = nullptr;
     }
     void print() {
         cout << "\n";
@@ -31,15 +30,32 @@ public:
             cout << "\nnullptr";
             return;
         }
-        _print(inicio);
+        _print(first);
     }
-    void save(T elem) {
+    void save(Generic elem) {
         guardar(elem);
+    }
+    void pushBack(Generic value) {
+        if (size == 0) {
+            Node* n = new Node(value);
+            first = n;
+            last = n;
+            ++size;
+        }
+        else {
+            Node* n = new Node(value);
+            last->next = n;
+            last = n;
+            ++size;
+        }
+    }
+    unsigned long Size() {
+        return size;
     }
 private:
     void disorder() {
         for (int i = size; i > 0; i--) {
-            Node* aux = inicio; Node* aux1 = inicio;
+            Node* aux = first; Node* aux1 = first;
             int j = rand() % i;
             for (int k = 0; k < j; k++)
                 aux = aux->next;
@@ -54,45 +70,10 @@ private:
         mostrar(n->value);
         _print(n->next);
     }
+    void swap(Generic* a, Generic* b) {
+        Generic temp = *a;
+        *a = *b;
+        *b = temp;
+    }
 
-public:
-    void pushBack(T value) {
-        if (size == 0) {
-            Node* n = new Node(value);
-            inicio = n;
-            fin = n;
-            ++size;
-        }
-        else {
-            Node* n = new Node(value);
-            fin->next = n;
-            fin = n;
-            ++size;
-        }
-    }
-    void popFront() {
-        if (size == 0) return;
-        Node* aux = inicio;
-        if (size == 1) inicio = fin = nullptr;
-        else inicio = inicio->next;
-        delete aux;
-        --size;
-    }
-    unsigned long Size() {
-        return size;
-    }
-    Node* insertInRange(function<void(T)> insert, int i, int f, Node* n) {
-        size_t init = i;
-        Node* aux = (!n) ? this->inicio : n;
-        for (init; init <= f; ++init) {
-            insert(aux->value);
-            aux = aux->next;
-        }
-        return aux;
-    }
-    void swap(T *a, T *b) {
-   		T temp = *a;
-   		*a = *b;
-   		*b = temp;
-   	}
 };

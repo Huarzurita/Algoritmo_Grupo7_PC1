@@ -1,0 +1,30 @@
+--------------------------------------------------------------------------------------------
+                                   °INFORMACIÓN DEL EVENTO°                                 
+--------------------------------------------------------------------------------------------
+  Título del evento: cumple
+  Fecha del evento: 4 de abril
+  Hora del evento: 7pm
+  Urgencia del evento: Alta
+  Descripción del evento: Cumplea¤os de mejor amiga, llevar bocaditos
+  Lugar del evento: Villa Teresa
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+                                   °INFORMACIÓN DEL EVENTO°                                 
+--------------------------------------------------------------------------------------------
+  Título del evento: Museo de arte exhibici¢n
+  Fecha del evento: 9 DE MAYO
+  Hora del evento: 12pm
+  Urgencia del evento: ALTA
+  Descripción del evento: llevar doble mascarillas y gel en alcohol
+  Lugar del evento: Museo de Arte
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+                                   °INFORMACIÓN DEL EVENTO°                                 
+--------------------------------------------------------------------------------------------
+  Título del evento: gggg
+  Fecha del evento: gggg
+  Hora del evento: gggg
+  Urgencia del evento: ggg
+  Descripción del evento: 
+  Lugar del evento: ggg
+--------------------------------------------------------------------------------------------
