@@ -19,9 +19,9 @@ public:
 		for (size_t i = 0; i < table.size(); ++i) {
 			cout << i << "->";	
 			for (list<Entity>::iterator it = table[i].begin(); it != table[i].end(); ++it) {
-				if (i == getIndex((*it).key)) { show((*it).value); break; }
+				if (i == getIndex((*it).key)) { show((*it).value); cout << endl; break; }
 			}	
-			cout << "\n";
+			cout << endl;
 		}
 	}
 };

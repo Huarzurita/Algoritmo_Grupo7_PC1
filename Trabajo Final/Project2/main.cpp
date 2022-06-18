@@ -37,9 +37,10 @@ auto primer_menu = []()->void {
 	cout << "\t| 7. Agregar Horario                                                                         |"<<endl;
 	cout << "\t| 8. Mostrar Datos                                                                           |"<<endl;
 	cout << "\t| 9. Simulación de Usuarios                                                                  |" << endl;
-	cout << "\t| 10. Usuarios en hash table                                                                 |" << endl;
-	cout << "\t| 11.QUIZZ :D                                                                                |"<<endl;
-	cout << "\t| 12.Bye bye                                                                                 |"<<endl;
+	cout << "\t| 10.Usuarios en hash table                                                                  |" << endl;
+	cout << "\t| 11.Número de usuarios en treap                                                             |" << endl;
+	cout << "\t| 12.QUIZZ :D                                                                                |"<<endl;
+	cout << "\t| 13.Bye bye                                                                                 |"<<endl;
 	cout << "\t|--------------------------------------------------------------------------------------------|" << endl;
 };
 function<void()> segundo_menu = []() {
@@ -60,22 +61,7 @@ function<void()> segundo_menu = []() {
 void imprimir(function<void()>funcion) {
 	funcion();
 }
-//void main() {
-//	Registros* d = new Registros();
-//	cout << "\t Simulación de Datos de Usuarios:" << endl;
-//	Console::ForegroundColor = ConsoleColor::Green;
-//	d->getList()->print();
-//	cout << "---------------------------------------------" << endl;
-//	d->Merge_Sort();
-//	Console::ForegroundColor = ConsoleColor::Cyan;
-//	cout << "\t Simulación de Datos de Ordenados:" << endl;
-//	d->getList()->print();
-//	cout << "---------------------------------------------" << endl;
-//	Console::ForegroundColor = ConsoleColor::Yellow;
-//	cout << "\t Hash Table:" << endl;
-//	d->Hash_Table();
-//	_getch();
-//}
+
 
 int main() {
 	setlocale(LC_ALL, "esp");
@@ -89,7 +75,7 @@ int main() {
 			system("cls");
 			imprimir(primer_menu);
 			cout << "\n\t    Ingresar opción:"; cin >> opc;
-		} while (opc < 1 || opc>12);
+		} while (opc < 1 || opc>13);
 		system("cls");
 		switch (opc) {
 		case 1:
@@ -185,6 +171,10 @@ int main() {
 			_getch();
 			break;
 		case 11:
+			controller->treap();
+			_getch();
+			break;
+		case 12:
 			do
 			{
 				system("cls");
@@ -212,7 +202,7 @@ int main() {
 
 
 			break;
-		case 12:
+		case 13:
 			exit(0);
 			break;
 		}

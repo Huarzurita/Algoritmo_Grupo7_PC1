@@ -70,19 +70,23 @@ public:
 	}
 	void imprimir_ordenar_table() {
 		Registros* d = new Registros();
-		cout << "\t Simulación de Datos de Usuarios:" << endl;
+		cout << "Simulación de Datos de Usuarios:" << endl;
 		Console::ForegroundColor = ConsoleColor::Green;
 		d->getList()->print();
 		cout << "---------------------------------------------" << endl;
 		d->Merge_Sort();
 		Console::ForegroundColor = ConsoleColor::Cyan;
-		cout << "\t Simulación de Datos de Ordenados:" << endl;
+		cout << "Simulación de Datos de Ordenados:" << endl;
 		d->getList()->print();
 		cout << "---------------------------------------------" << endl;
 		Console::ForegroundColor = ConsoleColor::Yellow;
-		cout << "\t Hash Table:" << endl;
-		d->Hash_Table();
+		cout << "Hash Table:" << endl;
+		d->Hash_Table(); 
 		system("pause");
+	}
+	void treap() {
+		Registros* d = new Registros();
+		d->delete_treap();
 	}
 	void generador() {
 		DataGenerator* generator = new DataGenerator("Users.txt");

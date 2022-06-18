@@ -1,5 +1,5 @@
 #include "HashTable.h"
-
+#include "Treap.h"
 class Registro {
 	string  name, code;
 	int number;
@@ -20,9 +20,12 @@ public:
 
 class Registros {
 	LinkedList<Registro*>* lista;
+	Treap*treap;
+	TreapNode* root;
 public:
 	Registros() {
-		lista = new LinkedList<Registro*>([](Registro* a) {cout << "\t" << a->toString() << endl; });
+		root = nullptr;
+		lista = new LinkedList<Registro*>([](Registro* a) {cout << a->toString() << endl; });
 		ifstream archivo("Users.txt");
 		string linea;
 		char delimitador = ',';
@@ -36,6 +39,7 @@ public:
 			int number = stoi(_number);
 			Registro* r = new Registro(number, code, name);
 			lista->pushBack(r);
+			treap->insertNode(root,number);
 		}
 		archivo.close();
 	}
@@ -44,7 +48,7 @@ public:
 	void Merge_Sort() {
 		function<bool(Registro* a, Registro* b)> func = [](Registro* a, Registro* b) {return a->getNumber() > b->getNumber();};
 		Registro** arreglo = lista->merge_sort(func);
-		LinkedList<Registro*>* aux = new LinkedList<Registro*>([](Registro* a) {cout <<"\t"<< a->toString() << endl; });
+		LinkedList<Registro*>* aux = new LinkedList<Registro*>([](Registro* a) {cout << a->toString() << endl; });
 		for (size_t i = 0; i < lista->_size(); i++) {
 			aux->pushBack(arreglo[i]);
 		}
@@ -52,7 +56,16 @@ public:
 	}
 	void Hash_Table() {
 		HashTable<Registro*>* hash = lista->hash_table([](Registro* a) {return a->getNumber(); });
-		hash->display([](Registro* a) {cout << "\t" << a->toString() << endl; });
+		hash->display([](Registro* a) {cout << a->toString(); });
+	}
+	void delete_treap() {
+		cout << "Treap: "<<endl;treap->printTreap(root);
+		cout << "Elimando al valor 2490:"<<endl;
+		treap->deleteNode(root, 2490);treap->printTreap(root);
+		cout << "Eliminando al valor 2677:"<<endl; 
+		treap->deleteNode(root, 2677);treap->printTreap(root);
+		cout << "Eliminando al valor 1458:" << endl;
+		treap->deleteNode(root, 1458);treap->printTreap(root);
 	}
 	~Registros() {}
 };
