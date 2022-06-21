@@ -6,7 +6,7 @@ private:
     int data, priority;
     TreapNode* left, * right;
     TreapNode(int data) :data(data) {
-        priority = rand() % 100;
+        priority = rand() % 200;
         left = right = nullptr;
     }
     friend class Treap;

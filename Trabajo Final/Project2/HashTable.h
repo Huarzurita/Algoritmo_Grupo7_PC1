@@ -6,7 +6,7 @@ class HashTable {
 		Generic value;
 		friend class HashTable;
 	public: Entity(int k = 0, Generic v = 0) :key(k), value(v) {}};
-	array<list<Entity>, 40> table;
+	array<list<Entity>, 1000> table;
 	function<int(Generic)> func_hash;
 public:
 	HashTable(function<int(Generic)> fh) :func_hash(fh) {}

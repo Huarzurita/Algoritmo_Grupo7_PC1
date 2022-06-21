@@ -89,8 +89,8 @@ public:
 		d->delete_treap();
 	}
 	void generador() {
-		DataGenerator* generator = new DataGenerator("Users.txt");
-		generator->generate(40);
+		DataGenerator* generator = new DataGenerator("Generador.csv");
+		generator->generate(1000000);
 	}
 	void mostrar_Musica() {musica->print();}
 	void mostrar_Horario() {horario->print();}
