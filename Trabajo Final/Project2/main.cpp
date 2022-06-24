@@ -38,9 +38,8 @@ auto primer_menu = []()->void {
 	cout << "\t| 8. Mostrar Datos                                                                           |"<<endl;
 	cout << "\t| 9. Simulación de Usuarios                                                                  |" << endl;
 	cout << "\t| 10.Usuarios en hash table                                                                  |" << endl;
-	cout << "\t| 11.Número de usuarios en treap                                                             |" << endl;
-	cout << "\t| 12.QUIZZ :D                                                                                |"<<endl;
-	cout << "\t| 13.Bye bye                                                                                 |"<<endl;
+	cout << "\t| 11.QUIZZ :D                                                                                |"<<endl;
+	cout << "\t| 12.Bye bye                                                                                 |"<<endl;
 	cout << "\t|--------------------------------------------------------------------------------------------|" << endl;
 };
 function<void()> segundo_menu = []() {
@@ -162,7 +161,13 @@ int main() {
 			system("cls");
 			break;
 		case 9:
-			controller->generador();
+			unsigned int usuarios;
+			cout << "Ingrese el numero de usuarios a generar " << "\n";
+			cin >> usuarios;
+			cout << "\n\t Espere...  :D" << endl;
+			controller->generador(usuarios);
+			
+			//controller->generadorMostrar() code error: ACM1PT
 			cout << "\n\t Los datos de usuarios simulados han sido realizados de forma exitosa..." << endl;
 			_getch();
 			break;
@@ -171,10 +176,6 @@ int main() {
 			_getch();
 			break;
 		case 11:
-			controller->treap();
-			_getch();
-			break;
-		case 12:
 			do
 			{
 				system("cls");
@@ -202,7 +203,7 @@ int main() {
 
 
 			break;
-		case 13:
+		case 12:
 			exit(0);
 			break;
 		}

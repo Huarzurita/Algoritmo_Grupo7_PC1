@@ -129,10 +129,8 @@
     <ClInclude Include="List.h" />
     <ClInclude Include="AdvanceSort.h" />
     <ClInclude Include="Registros.h" />
-    <ClInclude Include="SegmentTree.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="Queue.h" />
-    <ClInclude Include="Treap.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

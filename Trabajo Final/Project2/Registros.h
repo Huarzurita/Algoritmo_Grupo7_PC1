@@ -1,5 +1,5 @@
 #include "HashTable.h"
-#include "Treap.h"
+
 class Registro {
 	string  name, code;
 	int number;
@@ -20,11 +20,10 @@ public:
 
 class Registros {
 	LinkedList<Registro*>* lista;
-	Treap*treap;
-	TreapNode* root;
+
 public:
 	Registros() {
-		root = nullptr;
+		
 		lista = new LinkedList<Registro*>([](Registro* a) {cout << a->toString() << endl; });
 		ifstream archivo("Users.txt");
 		string linea;
@@ -39,7 +38,7 @@ public:
 			int number = stoi(_number);
 			Registro* r = new Registro(number, code, name);
 			lista->pushBack(r);
-			treap->insertNode(root,number);
+		
 		}
 		archivo.close();
 	}
@@ -58,14 +57,6 @@ public:
 		HashTable<Registro*>* hash = lista->hash_table([](Registro* a) {return a->getNumber(); });
 		hash->display([](Registro* a) {cout << a->toString(); });
 	}
-	void delete_treap() {
-		cout << "Treap: "<<endl;treap->printTreap(root);
-		cout << "Elimando al valor 2490:"<<endl;
-		treap->deleteNode(root, 2490);treap->printTreap(root);
-		cout << "Eliminando al valor 2677:"<<endl; 
-		treap->deleteNode(root, 2677);treap->printTreap(root);
-		cout << "Eliminando al valor 1458:" << endl;
-		treap->deleteNode(root, 1458);treap->printTreap(root);
-	}
+	
 	~Registros() {}
 };

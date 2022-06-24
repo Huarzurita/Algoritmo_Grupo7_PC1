@@ -1,30 +1,30 @@
 ﻿  main.cpp
-D:\visual\CICLO III\Borrador\Trabajo Final\Project2\Controller.h(179,21): warning C4018: '<': no coinciden signed/unsigned
-D:\visual\CICLO III\Borrador\Trabajo Final\Project2\Controller.h(197,21): warning C4018: '<': no coinciden signed/unsigned
-D:\visual\CICLO III\Borrador\Trabajo Final\Project2\Controller.h(216,21): warning C4018: '<': no coinciden signed/unsigned
-D:\visual\CICLO III\Borrador\Trabajo Final\Project2\Controller.h(231,21): warning C4018: '<': no coinciden signed/unsigned
-D:\visual\CICLO III\Borrador\Trabajo Final\Project2\Stack.h(38,27): warning C4018: '<': no coinciden signed/unsigned
-D:\visual\CICLO III\Borrador\Trabajo Final\Project2\Stack.h(36): message : al compilar la función del miembro clase plantilla "void Stack<CHorario<std::string> *>::print(void)"
-D:\visual\CICLO III\Borrador\Trabajo Final\Project2\Controller.h(96): message : Vea la referencia a la creación de una instancia de la función plantilla "void Stack<CHorario<std::string> *>::print(void)" que se está compilando
-D:\visual\CICLO III\Borrador\Trabajo Final\Project2\Controller.h(26): message : Vea la referencia a la creación de una instancia de clase plantilla "Stack<CHorario<std::string> *>" que se está compilando
-D:\visual\CICLO III\Borrador\Trabajo Final\Project2\AdvanceSort.h(83,22): warning C4018: '<': no coinciden signed/unsigned
-D:\visual\CICLO III\Borrador\Trabajo Final\Project2\AdvanceSort.h(77): message : al compilar la función del miembro clase plantilla "void AdvanceSort<long>::countingSort(long)"
-D:\visual\CICLO III\Borrador\Trabajo Final\Project2\AdvanceSort.h(39): message : Vea la referencia a la creación de una instancia de la función plantilla "void AdvanceSort<long>::countingSort(long)" que se está compilando
-D:\visual\CICLO III\Borrador\Trabajo Final\Project2\Controller.h(56): message : Vea la referencia a la creación de una instancia de clase plantilla "AdvanceSort<long>" que se está compilando
-D:\visual\CICLO III\Borrador\Trabajo Final\Project2\AdvanceSort.h(91,22): warning C4018: '<': no coinciden signed/unsigned
-D:\visual\CICLO III\Borrador\Trabajo Final\Project2\HashTable.h(86,22): warning C4018: '<': no coinciden signed/unsigned
-D:\visual\CICLO III\Borrador\Trabajo Final\Project2\HashTable.h(81): message : al compilar la función del miembro clase plantilla "void LinkedList<Registro *>::mergeSort(Generic *,size_t,std::function<bool (Generic,Generic)>)"
+D:\UPC\CICLO 3\Algoritmos y Estructuras de Datos\Algoritmo_Grupo7_PC1\Trabajo Final\Project2\Controller.h(180,21): warning C4018: '<': no coinciden signed/unsigned
+D:\UPC\CICLO 3\Algoritmos y Estructuras de Datos\Algoritmo_Grupo7_PC1\Trabajo Final\Project2\Controller.h(198,21): warning C4018: '<': no coinciden signed/unsigned
+D:\UPC\CICLO 3\Algoritmos y Estructuras de Datos\Algoritmo_Grupo7_PC1\Trabajo Final\Project2\Controller.h(217,21): warning C4018: '<': no coinciden signed/unsigned
+D:\UPC\CICLO 3\Algoritmos y Estructuras de Datos\Algoritmo_Grupo7_PC1\Trabajo Final\Project2\Controller.h(232,21): warning C4018: '<': no coinciden signed/unsigned
+D:\UPC\CICLO 3\Algoritmos y Estructuras de Datos\Algoritmo_Grupo7_PC1\Trabajo Final\Project2\Stack.h(38,27): warning C4018: '<': no coinciden signed/unsigned
+D:\UPC\CICLO 3\Algoritmos y Estructuras de Datos\Algoritmo_Grupo7_PC1\Trabajo Final\Project2\Stack.h(36): message : al compilar la función del miembro clase plantilla "void Stack<CHorario<std::string> *>::print(void)"
+D:\UPC\CICLO 3\Algoritmos y Estructuras de Datos\Algoritmo_Grupo7_PC1\Trabajo Final\Project2\Controller.h(97): message : Vea la referencia a la creación de una instancia de la función plantilla "void Stack<CHorario<std::string> *>::print(void)" que se está compilando
+D:\UPC\CICLO 3\Algoritmos y Estructuras de Datos\Algoritmo_Grupo7_PC1\Trabajo Final\Project2\Controller.h(28): message : Vea la referencia a la creación de una instancia de clase plantilla "Stack<CHorario<std::string> *>" que se está compilando
+D:\UPC\CICLO 3\Algoritmos y Estructuras de Datos\Algoritmo_Grupo7_PC1\Trabajo Final\Project2\AdvanceSort.h(83,22): warning C4018: '<': no coinciden signed/unsigned
+D:\UPC\CICLO 3\Algoritmos y Estructuras de Datos\Algoritmo_Grupo7_PC1\Trabajo Final\Project2\AdvanceSort.h(77): message : al compilar la función del miembro clase plantilla "void AdvanceSort<long>::countingSort(long)"
+D:\UPC\CICLO 3\Algoritmos y Estructuras de Datos\Algoritmo_Grupo7_PC1\Trabajo Final\Project2\AdvanceSort.h(39): message : Vea la referencia a la creación de una instancia de la función plantilla "void AdvanceSort<long>::countingSort(long)" que se está compilando
+D:\UPC\CICLO 3\Algoritmos y Estructuras de Datos\Algoritmo_Grupo7_PC1\Trabajo Final\Project2\Controller.h(58): message : Vea la referencia a la creación de una instancia de clase plantilla "AdvanceSort<long>" que se está compilando
+D:\UPC\CICLO 3\Algoritmos y Estructuras de Datos\Algoritmo_Grupo7_PC1\Trabajo Final\Project2\AdvanceSort.h(91,22): warning C4018: '<': no coinciden signed/unsigned
+D:\UPC\CICLO 3\Algoritmos y Estructuras de Datos\Algoritmo_Grupo7_PC1\Trabajo Final\Project2\HashTable.h(86,22): warning C4018: '<': no coinciden signed/unsigned
+D:\UPC\CICLO 3\Algoritmos y Estructuras de Datos\Algoritmo_Grupo7_PC1\Trabajo Final\Project2\HashTable.h(81): message : al compilar la función del miembro clase plantilla "void LinkedList<Registro *>::mergeSort(Generic *,size_t,std::function<bool (Generic,Generic)>)"
           with
           [
               Generic=Registro *
           ]
-D:\visual\CICLO III\Borrador\Trabajo Final\Project2\HashTable.h(104): message : Vea la referencia a la creación de una instancia de la función plantilla "void LinkedList<Registro *>::mergeSort(Generic *,size_t,std::function<bool (Generic,Generic)>)" que se está compilando
+D:\UPC\CICLO 3\Algoritmos y Estructuras de Datos\Algoritmo_Grupo7_PC1\Trabajo Final\Project2\HashTable.h(104): message : Vea la referencia a la creación de una instancia de la función plantilla "void LinkedList<Registro *>::mergeSort(Generic *,size_t,std::function<bool (Generic,Generic)>)" que se está compilando
           with
           [
               Generic=Registro *
           ]
-D:\visual\CICLO III\Borrador\Trabajo Final\Project2\Registros.h(28): message : Vea la referencia a la creación de una instancia de clase plantilla "LinkedList<Registro *>" que se está compilando
-D:\visual\CICLO III\Borrador\Trabajo Final\Project2\HashTable.h(88,27): warning C4018: '<': no coinciden signed/unsigned
-D:\visual\CICLO III\Borrador\Trabajo Final\Project2\Queue.h(58): warning C4715: 'Queue<Music<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > *>::empty': no todas las rutas de acceso de control devuelven un valor
+D:\UPC\CICLO 3\Algoritmos y Estructuras de Datos\Algoritmo_Grupo7_PC1\Trabajo Final\Project2\Registros.h(27): message : Vea la referencia a la creación de una instancia de clase plantilla "LinkedList<Registro *>" que se está compilando
+D:\UPC\CICLO 3\Algoritmos y Estructuras de Datos\Algoritmo_Grupo7_PC1\Trabajo Final\Project2\HashTable.h(88,27): warning C4018: '<': no coinciden signed/unsigned
+D:\UPC\CICLO 3\Algoritmos y Estructuras de Datos\Algoritmo_Grupo7_PC1\Trabajo Final\Project2\Queue.h(58): warning C4715: 'Queue<Music<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > *>::empty': no todas las rutas de acceso de control devuelven un valor
   main.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
-  Project2.vcxproj -> D:\visual\CICLO III\Borrador\Trabajo Final\Debug\Project2.exe
+  Project2.vcxproj -> D:\UPC\CICLO 3\Algoritmos y Estructuras de Datos\Algoritmo_Grupo7_PC1\Trabajo Final\Debug\Project2.exe

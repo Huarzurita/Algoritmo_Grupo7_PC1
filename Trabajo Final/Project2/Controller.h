@@ -16,12 +16,14 @@
 class Controller
 {
 private:
+	
 	vector<CTarea<string,int>*>tareas;vector<CRecordatorio<string>*>recordatorios;
 	vector<CNota<string>*>notas;vector<CEvento<string>*>eventos;
 	vector<Contact<string,long>*>agenda;vector<long>telefonos; Queue<Music<string>*>*musica;
 	Stack<CHorario<string>*>*horario;List<Quizz<string>*>* quizz;
 	fstream archivoTareas, archivoEventos, archivoNotas, archivoRecordatorios,archivoAgenda;
 public:
+	DataGenerator* generator = new DataGenerator("Generador.csv");
 	Controller() {
 		horario = new Stack<CHorario<string>*>([](CHorario<string>* a) {a->mostrar(); }, [](CHorario<string>* a) { a->guardar(); });
 		musica = new Queue<Music<string>*>([](Music<string>* a) {a->mostrar(); }, [](Music<string>* a) { a->guardar(); });
@@ -84,13 +86,12 @@ public:
 		d->Hash_Table(); 
 		system("pause");
 	}
-	void treap() {
-		Registros* d = new Registros();
-		d->delete_treap();
+	void generadorMostrar() {
+		generator->showAll();
 	}
-	void generador() {
-		DataGenerator* generator = new DataGenerator("Generador.csv");
-		generator->generate(1000000);
+	void generador(int x) {
+		
+		generator->generate(x);
 	}
 	void mostrar_Musica() {musica->print();}
 	void mostrar_Horario() {horario->print();}
