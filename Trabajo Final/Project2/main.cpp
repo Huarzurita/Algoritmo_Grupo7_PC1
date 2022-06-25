@@ -161,13 +161,13 @@ int main() {
 			system("cls");
 			break;
 		case 9:
-			unsigned int usuarios;
+			int usuarios;
 			cout << "Ingrese el numero de usuarios a generar " << "\n";
 			cin >> usuarios;
 			cout << "\n\t Espere...  :D" << endl;
 			controller->generador(usuarios);
 			
-			//controller->generadorMostrar() code error: ACM1PT
+			controller->generadorMostrar();
 			cout << "\n\t Los datos de usuarios simulados han sido realizados de forma exitosa..." << endl;
 			_getch();
 			break;

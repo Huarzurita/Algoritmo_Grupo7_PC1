@@ -1,18 +1,9 @@
 --------------------------------------------------------------------------------------------
                                    °INFORMACIÓN DE LA TAREA°                                
 --------------------------------------------------------------------------------------------
-  Título de la tarea: fefe
-  Fecha de la tarea: fefe
-  Hora de la tarea: 122
-  Urgencia de la tarea: ddd
-  Estado de la tarea: S
---------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------
-                                   °INFORMACIÓN DE LA TAREA°                                
---------------------------------------------------------------------------------------------
-  Título de la tarea: ff
-  Fecha de la tarea: fff
-  Hora de la tarea: 22
-  Urgencia de la tarea: defe
+  Título de la tarea: titulo
+  Fecha de la tarea: 15/07/1995
+  Hora de la tarea: 15
+  Urgencia de la tarea: :00
   Estado de la tarea: S
 --------------------------------------------------------------------------------------------
